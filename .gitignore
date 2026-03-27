@@ -1,0 +1,12 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/LaberintoPharo25-26/CopilotIndices/17.14.1561.44479
+/.vs/LaberintoPharo25-26/FileContentIndex
+/.vs/LaberintoPharo25-26/v17/.wsuo
+/.vs/LaberintoPharo25-26/v17/DocumentLayout.json
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite-journal
