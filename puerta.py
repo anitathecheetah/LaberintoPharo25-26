@@ -11,4 +11,4 @@ class Puerta(Hoja):
         if self.abierta:
             print("Has cruzado la puerta")
         else:
-            print("La puerta está cerrada")
+            print("La puerta esta cerrada")

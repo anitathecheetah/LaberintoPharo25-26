@@ -11,7 +11,7 @@ class Habitacion(Contenedor):
         self.oeste = None
 
     def entrar(self, alguien=None):
-        print(f"Has entrado en la habitación {self.num}")
+        print(f"Has entrado en la habitacion {self.num}")
 
     def ponerEn(self, orientacion, elemento):
         setattr(self, orientacion.lower(), elemento)
