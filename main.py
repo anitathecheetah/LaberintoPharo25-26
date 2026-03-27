@@ -1,4 +1,7 @@
 from juego import Juego
+from bicho import Bicho
+from agresivo import Agresivo
+from perezoso import Perezoso
 
 
 def main():
@@ -19,6 +22,13 @@ def main():
     habitacion_1.este.abierta = True
     print("\nAbriendo la puerta y probando otra vez:")
     habitacion_1.este.entrar()
+
+    print("\n--- Probando Strategy con bichos ---")
+    bicho = Bicho(Agresivo(), vidas=120, poder=25)
+    bicho.actuar()
+
+    bicho.cambiar_modo(Perezoso())
+    bicho.actuar()
 
 
 if __name__ == "__main__":
