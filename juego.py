@@ -14,6 +14,18 @@ class Juego:
         self.laberinto = None
         self.bichos = []
 
+    def notificar(self, remitente, evento, datos=None):
+        """Método de mediación central (Patrón Mediator)"""
+        if evento == "atacar":
+            objetivo = datos
+            print(f"JUEGO (Mediador): {remitente.nombre if hasattr(remitente, 'nombre') else remitente.__class__.__name__} ataca a {objetivo.nombre if hasattr(objetivo, 'nombre') else objetivo.__class__.__name__} con {remitente.poder} puntos de poder.")
+            objetivo.recibir_dano(remitente.poder)
+        elif evento == "derrotado":
+            print(f"JUEGO (Mediador): Certificado de defunción emitido para {remitente.nombre if hasattr(remitente, 'nombre') else remitente.__class__.__name__}.")
+        elif evento == "entrar_habitacion":
+            habitacion = datos
+            print(f"JUEGO (Mediador): Sistema centralizado detecta movimiento hacia la habitación {habitacion.num}.")
+
     def fabricar_laberinto(self):
         return self.factory.fabricar_laberinto()
 
