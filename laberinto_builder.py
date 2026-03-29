@@ -6,6 +6,10 @@ from laberinto import Laberinto
 from pared import Pared
 from perezoso import Perezoso
 from puerta import Puerta
+from norte import Norte
+from sur import Sur
+from este import Este
+from oeste import Oeste
 
 
 class LaberintoBuilder(Builder):
@@ -17,12 +21,21 @@ class LaberintoBuilder(Builder):
         self.laberinto = Laberinto()
         return self.laberinto
 
+    def str_to_orientacion(self, orientacion_str):
+        estrategias = {
+            "norte": Norte(),
+            "sur": Sur(),
+            "este": Este(),
+            "oeste": Oeste()
+        }
+        return estrategias.get(orientacion_str.lower())
+
     def fabricarHabitacion(self, num):
         habitacion = Habitacion(num)
-        habitacion.ponerEn("norte", self.fabricarPared())
-        habitacion.ponerEn("sur", self.fabricarPared())
-        habitacion.ponerEn("este", self.fabricarPared())
-        habitacion.ponerEn("oeste", self.fabricarPared())
+        habitacion.poner_en(Norte(), self.fabricarPared())
+        habitacion.poner_en(Sur(), self.fabricarPared())
+        habitacion.poner_en(Este(), self.fabricarPared())
+        habitacion.poner_en(Oeste(), self.fabricarPared())
         self.laberinto.agregar_habitacion(habitacion)
         return habitacion
 
@@ -40,8 +53,8 @@ class LaberintoBuilder(Builder):
             raise ValueError("No se puede crear la puerta: falta una habitacion")
 
         puerta = self.fabricarPuerta(lado1, lado2)
-        lado1.ponerEn(or1.lower(), puerta)
-        lado2.ponerEn(or2.lower(), puerta)
+        lado1.poner_en(self.str_to_orientacion(or1), puerta)
+        lado2.poner_en(self.str_to_orientacion(or2), puerta)
         return puerta
 
     def fabricarBichoModo(self, str_modo, posicion):

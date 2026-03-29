@@ -1,10 +1,14 @@
 from contenedor import Contenedor
-
+from norte import Norte
+from sur import Sur
+from este import Este
+from oeste import Oeste
 
 class Habitacion(Contenedor):
     def __init__(self, num):
         super().__init__()
         self.num = num
+        self.orientaciones = [Norte(), Sur(), Este(), Oeste()]
         self.norte = None
         self.sur = None
         self.este = None
@@ -13,11 +17,12 @@ class Habitacion(Contenedor):
     def entrar(self, alguien=None):
         print(f"Has entrado en la habitacion {self.num}")
 
-    def ponerEn(self, orientacion, elemento):
-        setattr(self, orientacion.lower(), elemento)
+    def poner_en(self, orientacion, elemento):
+        # El patrón Strategy en accion delegando a la orientación
+        orientacion.poner_en(self, elemento)
 
     def mostrar_orientaciones(self):
-        print("Norte:", type(self.norte).__name__ if self.norte else None)
-        print("Sur:", type(self.sur).__name__ if self.sur else None)
-        print("Este:", type(self.este).__name__ if self.este else None)
-        print("Oeste:", type(self.oeste).__name__ if self.oeste else None)
+        for o in self.orientaciones:
+            elem = o.obtener_de(self)
+            print(f"{type(o).__name__}: {type(elem).__name__ if elem else None}")
+
