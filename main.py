@@ -50,6 +50,12 @@ def main():
     print("\nAbriendo la puerta y probando otra vez:")
     habitacion_1.este.entrar()
 
+    print("\n--- Probando Singleton en Orientaciones ---")
+    from norte import Norte as ImportNorte
+    n1 = ImportNorte()
+    n2 = ImportNorte()
+    print(f"¿Son n1 y n2 la misma y única instancia en memoria? {'Sí' if n1 is n2 else 'No'}")
+
     print("\n--- Probando Iterator Interno (recorrer) ---")
     elementos_vistos = []
     def contar_elemento(elemento):
