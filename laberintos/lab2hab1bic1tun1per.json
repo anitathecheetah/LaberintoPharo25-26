@@ -1,0 +1,19 @@
+{
+  "forma": "poligono4",
+  "laberinto": [
+    { "tipo": "habitacion", "num": 1, "hijos": [] },
+    { "tipo": "habitacion", "num": 2, "hijos": [] }
+  ],
+  "puertas": [
+    [1, "este", 2, "oeste"]
+  ],
+  "bichos": [
+    {"modo": "Perezoso", "posicion": 2}
+  ],
+  "tuneles": [
+    {"posicion": 1, "orientacion": "norte"}
+  ],
+  "personajes": [
+    {"nombre": "Ana (La bruja piruja)", "posicion": 1}
+  ]
+}

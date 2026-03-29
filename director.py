@@ -23,6 +23,8 @@ class Director:
         self.fabricarLaberinto()
         self.fabricarJuego()
         self.fabricarBichos()
+        self.fabricarTuneles()
+        self.fabricarPersonajes()
         return self._juego
 
     def leerArchivo(self, archivo):
@@ -73,6 +75,20 @@ class Director:
             modo = bicho_data.get("modo", "Agresivo")
             posicion = bicho_data.get("posicion", 1)
             self._builder.fabricarBichoModo(modo, posicion)
+
+    def fabricarTuneles(self):
+        tuneles_data = self._dict.get("tuneles", [])
+        for tunel_data in tuneles_data:
+            pos = tunel_data.get("posicion", 1)
+            ori = tunel_data.get("orientacion", "norte")
+            self._builder.fabricarTunel(pos, ori)
+
+    def fabricarPersonajes(self):
+        personajes_data = self._dict.get("personajes", [])
+        for p_data in personajes_data:
+            nombre = p_data.get("nombre", "Heroe")
+            pos = p_data.get("posicion", 1)
+            self._builder.fabricarPersonaje(nombre, pos)
 
     def __str__(self):
         return f"Director con builder={self._builder}"

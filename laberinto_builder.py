@@ -85,5 +85,29 @@ class LaberintoBuilder(Builder):
         self.laberinto.agregar_bicho(bicho)
         return bicho
 
+    def fabricarTunel(self, num_hab, orientacion_str):
+        from tunel import Tunel
+        from laberinto import Laberinto
+        from habitacion import Habitacion
+        
+        hab = self.laberinto.obtener_habitacion(num_hab)
+        if hab:
+            # Laberinto destino
+            lab_destino = self.juego.factory.fabricar_laberinto()
+            hab_destino = self.juego.factory.fabricar_habitacion(99)
+            lab_destino.agregar_habitacion(hab_destino)
+            
+            tunel = Tunel(lab_destino)
+            hab.poner_en(self.str_to_orientacion(orientacion_str), tunel)
+
+    def fabricarPersonaje(self, nombre, posicion):
+        from personaje import Personaje
+        hab = self.juego.obtener_habitacion(posicion)
+        if hab:
+            personaje = Personaje(nombre)
+            personaje.posicion = hab
+            personaje.juego = self.juego
+            self.juego.personaje = personaje
+
     def obtenerLaberinto(self):
         return self.laberinto

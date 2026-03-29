@@ -1,9 +1,9 @@
-class Bicho:
+from ente import Ente
+
+class Bicho(Ente):
     def __init__(self, modo, vidas=100, poder=10):
+        super().__init__(vidas, poder)
         self.modo = modo
-        self.vidas = vidas
-        self.poder = poder
-        self.posicion = None
 
     def actuar(self):
         self.modo.actuar(self)

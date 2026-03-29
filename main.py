@@ -113,6 +113,22 @@ def main():
     aventurero.usar_varita(varita_magica)
     print(f"Estado tras el segundo ataque: {bicho.modo.__class__.__name__}")
 
+    print("\n--- Probando Mediator (Juego centralizando interacciones) ---")
+    # Enlazamos los entes con el mediador (Juego)
+    aventurero.juego = juego
+    bicho.juego = juego
+    
+    print("El aventurero decide atacar al bicho. Petición enviada al Mediator:")
+    aventurero.atacar(bicho)
+    
+    print("El bicho furioso contraataca pidiendo permiso al Mediator:")
+    # Como bicho usa el modo, el modo ataque delega o llamamos directamente atacar
+    bicho.atacar(aventurero)
+    
+    print("Ataque letal del aventurero para ver la notificación de muerte:")
+    aventurero.poder = 1000  # Truco de fuerza
+    aventurero.atacar(bicho)
+
 
 if __name__ == "__main__":
     main()

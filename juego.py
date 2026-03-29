@@ -13,6 +13,39 @@ class Juego:
         self.factory = factory or LaberintoFactory()
         self.laberinto = None
         self.bichos = []
+        self.personaje = None
+
+    def notificar(self, remitente, evento, datos=None):
+        """Método de mediación central (Patrón Mediator)"""
+        if evento == "atacar":
+            objetivo = datos
+            print(f"JUEGO (Mediador): {remitente.nombre if hasattr(remitente, 'nombre') else remitente.__class__.__name__} ataca a {objetivo.nombre if hasattr(objetivo, 'nombre') else objetivo.__class__.__name__} con {remitente.poder} puntos de poder.")
+            objetivo.recibir_dano(remitente.poder)
+        elif evento == "derrotado":
+            print(f"JUEGO (Mediador): Certificado de defunción emitido para {remitente.nombre if hasattr(remitente, 'nombre') else remitente.__class__.__name__}.")
+        elif evento == "entrar_habitacion":
+            habitacion = datos
+            print(f"JUEGO (Mediador): Sistema centralizado detecta movimiento hacia la habitación {habitacion.num}.")
+            
+            from personaje import Personaje
+            from bicho import Bicho
+            if isinstance(remitente, Personaje):
+                for bicho in list(self.bichos):
+                    if bicho.posicion == habitacion and bicho.esta_vivo():
+                        print(f" ¡EMBOSCADA! {remitente.nombre} se topa con un {bicho.__class__.__name__} en la habitación {habitacion.num}.")
+                        while remitente.esta_vivo() and bicho.esta_vivo():
+                            remitente.atacar(bicho)
+                            if bicho.esta_vivo():
+                                bicho.atacar(remitente)
+                                
+            elif isinstance(remitente, Bicho):
+                if hasattr(self, 'personaje') and self.personaje and self.personaje.posicion == habitacion:
+                    if self.personaje.esta_vivo() and remitente.esta_vivo():
+                        print(f" ¡EMBOSCADA! Un {remitente.__class__.__name__} ha sorprendido a {self.personaje.nombre} en la habitación {habitacion.num}.")
+                        while remitente.esta_vivo() and self.personaje.esta_vivo():
+                            remitente.atacar(self.personaje)
+                            if self.personaje.esta_vivo():
+                                self.personaje.atacar(remitente)
 
     def fabricar_laberinto(self):
         return self.factory.fabricar_laberinto()
