@@ -10,3 +10,8 @@ class Agresivo(Modo):
         
     def dormir(self, bicho):
         print(f"El bicho apenas duerme, se mantiene en vela y alerta.")
+
+    def cambiar_modo(self, bicho):
+        from perezoso import Perezoso
+        print("Un rayo mágico daña al bicho agresivo...")
+        bicho.cambiar_modo(Perezoso())

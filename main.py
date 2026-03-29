@@ -96,6 +96,22 @@ def main():
     
     print("El bicho te persigue por el túnel:")
     habitacion_1.norte.entrar(bicho)
+    
+    print("\n--- Probando Adapter (Varita Mágica) ---")
+    from personaje import Personaje
+    from bicho_adapter import BichoAdapter
+    
+    aventurero = Personaje("Ana (La bruja piruja)")
+    print(f"Estado inicial del bicho: {bicho.modo.__class__.__name__}")
+    
+    # Creamos un adaptador para que el héroe pueda usar el bicho como si fuera una Varita
+    varita_magica = BichoAdapter(bicho)
+    aventurero.usar_varita(varita_magica)
+    print(f"Estado tras el primer ataque: {bicho.modo.__class__.__name__}")
+    
+    print("\nUsando la varita de nuevo para revertirlo...")
+    aventurero.usar_varita(varita_magica)
+    print(f"Estado tras el segundo ataque: {bicho.modo.__class__.__name__}")
 
 
 if __name__ == "__main__":
