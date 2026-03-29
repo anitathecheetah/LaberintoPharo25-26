@@ -26,6 +26,7 @@ class Juego:
             habitacion = datos
             print(f"JUEGO (Mediador): Sistema centralizado detecta movimiento hacia la habitación {habitacion.num}.")
 
+                        print(f" ¡EMBOSCADA INVERSA! Un {remitente.__class__.__name__} ha sorprendido a {self.personaje.nombre} en la habitación {habitacion.num}.")
     def fabricar_laberinto(self):
         return self.factory.fabricar_laberinto()
 
