@@ -1,0 +1,39 @@
+from hoja import Hoja
+
+class Tunel(Hoja):
+    """
+    Patrón Proxy: Actúa como intermediario o sustituto para controlar 
+    el acceso a un objeto complejo (en este caso, un Laberinto entero).
+    """
+
+    def __init__(self, laberinto=None):
+        super().__init__()
+        self.laberinto = laberinto
+
+    def entrar(self, alguien=None):
+        if self.laberinto is None:
+            print("El túnel parece estar derrumbado. No lleva a ningún sitio.")
+            return
+
+        print("--- ! Has entrado en el Túnel Teletransportador (Proxy) ! ---")
+        if alguien is not None:
+            print(f"[{alguien.modo.__class__.__name__}] Bicho entra en el túnel...")
+            print(f"...y es transportado mágicamente a un nuevo Laberinto.")
+            # Encontramos la primera habitación del nuevo laberinto para teletransportarnos ahí
+            if self.laberinto.habitaciones:
+                self.laberinto.habitaciones[0].entrar(alguien)
+            else:
+                self.laberinto.entrar(alguien)
+        else:
+            print("Te adentras en el oscuro túnel...")
+            print("...y apareces en un lugar completamente distinto.")
+            if self.laberinto.habitaciones:
+                self.laberinto.habitaciones[0].entrar()
+            else:
+                self.laberinto.entrar()
+
+    def recorrer(self, bloque):
+        """Implementación del Iterator para que atraviese el proxy"""
+        bloque(self)
+        if self.laberinto is not None:
+            self.laberinto.recorrer(bloque)
