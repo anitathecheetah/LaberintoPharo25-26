@@ -81,6 +81,22 @@ def main():
     bicho.cambiar_modo(Perezoso())
     bicho.actuar()
 
+    print("\n--- Probando Proxy (Tunel) ---")
+    from tunel import Tunel
+    juego_proxy = Juego()
+    laberinto_proxy = juego_proxy.crear_laberinto_demo()
+    
+    tunel = Tunel(laberinto_proxy)
+    from norte import Norte as ImportNorteProxy
+    print("Colocando el Túnel Mágico en el Norte de la habitacion_1:")
+    habitacion_1.poner_en(ImportNorteProxy(), tunel)
+    
+    print("Entras en el túnel:")
+    habitacion_1.norte.entrar()
+    
+    print("El bicho te persigue por el túnel:")
+    habitacion_1.norte.entrar(bicho)
+
 
 if __name__ == "__main__":
     main()
