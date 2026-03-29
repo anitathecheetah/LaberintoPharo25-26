@@ -2,6 +2,10 @@ from laberinto import Laberinto
 from habitacion import Habitacion
 from pared import Pared
 from puerta import Puerta
+from norte import Norte
+from sur import Sur
+from este import Este
+from oeste import Oeste
 
 
 class Juego:
@@ -37,15 +41,16 @@ class Juego:
 
         puerta = self.fabricar_puerta(habitacion_1, habitacion_2, abierta=False)
 
-        habitacion_1.ponerEn("norte", self.fabricar_pared())
-        habitacion_1.ponerEn("sur", self.fabricar_pared())
-        habitacion_1.ponerEn("oeste", self.fabricar_pared())
-        habitacion_1.ponerEn("este", puerta)
+        habitacion_1.poner_en(Norte(), self.fabricar_pared())
+        habitacion_1.poner_en(Sur(), self.fabricar_pared())
+        habitacion_1.poner_en(Oeste(), self.fabricar_pared())
+        habitacion_1.poner_en(Este(), puerta)
 
-        habitacion_2.ponerEn("norte", self.fabricar_pared())
-        habitacion_2.ponerEn("sur", self.fabricar_pared())
-        habitacion_2.ponerEn("este", self.fabricar_pared())
-        habitacion_2.ponerEn("oeste", puerta)
+        habitacion_2.poner_en(Norte(), self.fabricar_pared())
+        habitacion_2.poner_en(Sur(), self.fabricar_pared())
+        habitacion_2.poner_en(Este(), self.fabricar_pared())
+        habitacion_2.poner_en(Oeste(), puerta)
+
 
         laberinto.agregar_habitacion(habitacion_1)
         laberinto.agregar_habitacion(habitacion_2)
