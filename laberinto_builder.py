@@ -18,11 +18,16 @@ class LaberintoBuilder(Builder):
         return self.laberinto
 
     def fabricarHabitacion(self, num):
+        from norte import Norte
+        from sur import Sur
+        from este import Este
+        from oeste import Oeste
+
         habitacion = Habitacion(num)
-        habitacion.ponerEn("norte", self.fabricarPared())
-        habitacion.ponerEn("sur", self.fabricarPared())
-        habitacion.ponerEn("este", self.fabricarPared())
-        habitacion.ponerEn("oeste", self.fabricarPared())
+        habitacion.poner_en(Norte(), self.fabricarPared())
+        habitacion.poner_en(Sur(), self.fabricarPared())
+        habitacion.poner_en(Este(), self.fabricarPared())
+        habitacion.poner_en(Oeste(), self.fabricarPared())
         self.laberinto.agregar_habitacion(habitacion)
         return habitacion
 
@@ -33,6 +38,19 @@ class LaberintoBuilder(Builder):
         return Pared()
 
     def fabricarPuertaLado1Or1Lado2Or2(self, num1, or1, num2, or2):
+        from norte import Norte
+        from sur import Sur
+        from este import Este
+        from oeste import Oeste
+
+        def str_to_orientacion(orientacion_str):
+            s = orientacion_str.lower()
+            if s == "norte": return Norte()
+            if s == "sur": return Sur()
+            if s == "este": return Este()
+            if s == "oeste": return Oeste()
+            raise ValueError(f"Orientacion desconocida: {orientacion_str}")
+
         lado1 = self.laberinto.obtener_habitacion(num1)
         lado2 = self.laberinto.obtener_habitacion(num2)
 
@@ -40,8 +58,8 @@ class LaberintoBuilder(Builder):
             raise ValueError("No se puede crear la puerta: falta una habitacion")
 
         puerta = self.fabricarPuerta(lado1, lado2)
-        lado1.ponerEn(or1.lower(), puerta)
-        lado2.ponerEn(or2.lower(), puerta)
+        lado1.poner_en(str_to_orientacion(or1), puerta)
+        lado2.poner_en(str_to_orientacion(or2), puerta)
         return puerta
 
     def fabricarBichoModo(self, str_modo, posicion):

@@ -23,6 +23,16 @@ def main():
     print("\nAbriendo la puerta y probando otra vez:")
     habitacion_1.este.entrar()
 
+    print("\n--- Probando Builder y Director ---")
+    from director import Director
+    director = Director()
+    try:
+        juego_construido = director.procesar("laberintos/lab2hab2b.json")
+        lab_builder = juego_construido.laberinto
+        print(f"Builder y Director han ensamblado con éxito un laberinto con {len(lab_builder.habitaciones)} habitaciones desde JSON.")
+    except Exception as e:
+        print(f"Error probando Builder: {e}")
+
     print("\n--- Probando Strategy con bichos ---")
     bicho = Bicho(Agresivo(), vidas=120, poder=25)
     bicho.actuar()
