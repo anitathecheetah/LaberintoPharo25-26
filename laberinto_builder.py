@@ -31,6 +31,11 @@ class LaberintoBuilder(Builder):
         return estrategias.get(orientacion_str.lower())
 
     def fabricarHabitacion(self, num):
+        from norte import Norte
+        from sur import Sur
+        from este import Este
+        from oeste import Oeste
+
         habitacion = Habitacion(num)
         habitacion.poner_en(Norte(), self.fabricarPared())
         habitacion.poner_en(Sur(), self.fabricarPared())
@@ -46,6 +51,11 @@ class LaberintoBuilder(Builder):
         return Pared()
 
     def fabricarPuertaLado1Or1Lado2Or2(self, num1, or1, num2, or2):
+        from norte import Norte
+        from sur import Sur
+        from este import Este
+        from oeste import Oeste
+
         lado1 = self.laberinto.obtener_habitacion(num1)
         lado2 = self.laberinto.obtener_habitacion(num2)
 
