@@ -59,6 +59,11 @@ def main():
         print(f"Builder y Director han ensamblado con éxito un laberinto con {len(lab_builder.habitaciones)} habitaciones desde JSON.")
     except Exception as e:
         print(f"Error probando Builder: {e}")
+    print("\n--- Probando Singleton en Orientaciones ---")
+    from norte import Norte as ImportNorte
+    n1 = ImportNorte()
+    n2 = ImportNorte()
+    print(f"¿Son n1 y n2 la misma y única instancia en memoria? {'Sí' if n1 is n2 else 'No'}")
 
     print("\n--- Probando Iterator Interno (recorrer) ---")
     elementos_vistos = []
