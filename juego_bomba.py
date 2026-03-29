@@ -1,14 +1,16 @@
 from juego import Juego
-from pared_bomba import ParedBomba
-from puerta_bomba import PuertaBomba
+from bomba import Bomba
+from pared import Pared
+from puerta import Puerta
 
 class JuegoBomba(Juego):
     """
     Concrete Creator en el patrón Factory Method.
-    Sobreescribe el método de fabricación para devolver un ConcreteProduct distinto.
+    Ahora usa el patrón Decorator en vez de herencia estática.
     """
     def fabricar_pared(self):
-        return ParedBomba()
+        return Bomba(Pared())
         
     def fabricar_puerta(self, lado1=None, lado2=None, abierta=False):
-        return PuertaBomba(lado1, lado2, abierta)
+        return Bomba(Puerta(lado1, lado2, abierta))
+

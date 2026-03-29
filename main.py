@@ -17,13 +17,20 @@ def main():
     print("\nProbando el norte:")
     habitacion_1.norte.entrar()
 
-    print("\n--- Probando Factory Method con JuegoBomba ---")
+    print("\n--- Probando Factory Method con JuegoBomba y Decorator ---")
     juego_bomba = JuegoBomba()
     laberinto_bomba = juego_bomba.crear_laberinto_demo()
     habitacion_bomba = laberinto_bomba.habitaciones[0]
-    print("Probando el norte (esperando pared bomba):")
+    print("Probando el norte (esperando pared decorada con bomba):")
     habitacion_bomba.norte.activa = True
     habitacion_bomba.norte.entrar()
+
+    print("\n--- Probando Decorator Dinámico (Hechizo) ---")
+    from hechizo import Hechizo
+    print("Decorando la puerta este actual con un Hechizo:")
+    habitacion_bomba.este = Hechizo(habitacion_bomba.este)
+    habitacion_bomba.este.entrar()
+
 
 
     print("\nProbando el este:")
