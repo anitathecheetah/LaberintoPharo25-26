@@ -13,6 +13,7 @@ class Juego:
         self.factory = factory or LaberintoFactory()
         self.laberinto = None
         self.bichos = []
+        self.personaje = None
 
     def notificar(self, remitente, evento, datos=None):
         """Método de mediación central (Patrón Mediator)"""
@@ -25,8 +26,27 @@ class Juego:
         elif evento == "entrar_habitacion":
             habitacion = datos
             print(f"JUEGO (Mediador): Sistema centralizado detecta movimiento hacia la habitación {habitacion.num}.")
+            
+            from personaje import Personaje
+            from bicho import Bicho
+            if isinstance(remitente, Personaje):
+                for bicho in list(self.bichos):
+                    if bicho.posicion == habitacion and bicho.esta_vivo():
+                        print(f" ¡EMBOSCADA! {remitente.nombre} se topa con un {bicho.__class__.__name__} en la habitación {habitacion.num}.")
+                        while remitente.esta_vivo() and bicho.esta_vivo():
+                            remitente.atacar(bicho)
+                            if bicho.esta_vivo():
+                                bicho.atacar(remitente)
+                                
+            elif isinstance(remitente, Bicho):
+                if hasattr(self, 'personaje') and self.personaje and self.personaje.posicion == habitacion:
+                    if self.personaje.esta_vivo() and remitente.esta_vivo():
+                        print(f" ¡EMBOSCADA! Un {remitente.__class__.__name__} ha sorprendido a {self.personaje.nombre} en la habitación {habitacion.num}.")
+                        while remitente.esta_vivo() and self.personaje.esta_vivo():
+                            remitente.atacar(self.personaje)
+                            if self.personaje.esta_vivo():
+                                self.personaje.atacar(remitente)
 
-                        print(f" ¡EMBOSCADA INVERSA! Un {remitente.__class__.__name__} ha sorprendido a {self.personaje.nombre} en la habitación {habitacion.num}.")
     def fabricar_laberinto(self):
         return self.factory.fabricar_laberinto()
 
