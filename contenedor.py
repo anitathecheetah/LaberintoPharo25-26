@@ -12,3 +12,8 @@ class Contenedor(ElementoMapa):
 
     def recorrer_hijos(self):
         return iter(self.hijos)
+
+    def recorrer(self, bloque):
+        super().recorrer(bloque)
+        for hijo in self.hijos:
+            hijo.recorrer(bloque)

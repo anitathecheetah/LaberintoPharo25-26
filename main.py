@@ -33,7 +33,16 @@ def main():
     print("\nAbriendo la puerta y probando otra vez:")
     habitacion_1.este.entrar()
 
+    print("\n--- Probando Iterator Interno (recorrer) ---")
+    elementos_vistos = []
+    def contar_elemento(elemento):
+        elementos_vistos.append(type(elemento).__name__)
+    
+    laberinto.recorrer(contar_elemento)
+    print(f"El iterador interno ha recorrido {len(elementos_vistos)} elementos en total en el laberinto.")
+
     print("\n--- Probando Strategy con bichos ---")
+
     bicho = Bicho(Agresivo(), vidas=120, poder=25)
     bicho.actuar()
 

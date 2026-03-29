@@ -21,3 +21,10 @@ class Habitacion(Contenedor):
         print("Sur:", type(self.sur).__name__ if self.sur else None)
         print("Este:", type(self.este).__name__ if self.este else None)
         print("Oeste:", type(self.oeste).__name__ if self.oeste else None)
+
+    def recorrer(self, bloque):
+        super().recorrer(bloque)
+        if self.norte: self.norte.recorrer(bloque)
+        if self.sur: self.sur.recorrer(bloque)
+        if self.este: self.este.recorrer(bloque)
+        if self.oeste: self.oeste.recorrer(bloque)
