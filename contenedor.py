@@ -2,9 +2,10 @@ from elemento_mapa import ElementoMapa
 
 
 class Contenedor(ElementoMapa):
-    def __init__(self):
+    def __init__(self, forma=None):
         super().__init__()
         self.hijos = []
+        self.forma = forma
 
     def agregarHijo(self, hijo):
         hijo.padre = self

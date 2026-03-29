@@ -1,4 +1,5 @@
 from contenedor import Contenedor
+from cuadrado import Cuadrado
 from norte import Norte
 from sur import Sur
 from este import Este
@@ -6,9 +7,10 @@ from oeste import Oeste
 
 class Habitacion(Contenedor):
     def __init__(self, num):
-        super().__init__()
+        # El patrón Bridge: delegamos las propiedades geométricas a un objeto Forma (Cuadrado)
+        super().__init__(forma=Cuadrado())
         self.num = num
-        self.orientaciones = [Norte(), Sur(), Este(), Oeste()]
+        self.orientaciones = self.forma.obtener_orientaciones() if self.forma else []
         self.norte = None
         self.sur = None
         self.este = None
