@@ -2,6 +2,7 @@ from juego import Juego
 from bicho import Bicho
 from agresivo import Agresivo
 from perezoso import Perezoso
+from juego_bomba import JuegoBomba
 
 
 def main():
@@ -15,6 +16,15 @@ def main():
 
     print("\nProbando el norte:")
     habitacion_1.norte.entrar()
+
+    print("\n--- Probando Factory Method con JuegoBomba ---")
+    juego_bomba = JuegoBomba()
+    laberinto_bomba = juego_bomba.crear_laberinto_demo()
+    habitacion_bomba = laberinto_bomba.habitaciones[0]
+    print("Probando el norte (esperando pared bomba):")
+    habitacion_bomba.norte.activa = True
+    habitacion_bomba.norte.entrar()
+
 
     print("\nProbando el este:")
     habitacion_1.este.entrar()
