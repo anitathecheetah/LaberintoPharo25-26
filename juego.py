@@ -2,24 +2,25 @@ from laberinto import Laberinto
 from habitacion import Habitacion
 from pared import Pared
 from puerta import Puerta
-
+from laberinto_factory import LaberintoFactory
 
 class Juego:
-    def __init__(self):
+    def __init__(self, factory=None):
+        self.factory = factory or LaberintoFactory()
         self.laberinto = None
         self.bichos = []
 
     def fabricar_laberinto(self):
-        return Laberinto()
+        return self.factory.fabricar_laberinto()
 
     def fabricar_habitacion(self, numero):
-        return Habitacion(numero)
+        return self.factory.fabricar_habitacion(numero)
 
     def fabricar_pared(self):
-        return Pared()
+        return self.factory.fabricar_pared()
 
     def fabricar_puerta(self, lado1=None, lado2=None, abierta=False):
-        return Puerta(lado1, lado2, abierta)
+        return self.factory.fabricar_puerta(lado1, lado2, abierta)
 
     def agregar_bicho(self, bicho):
         self.bichos.append(bicho)

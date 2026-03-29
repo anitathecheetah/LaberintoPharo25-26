@@ -25,6 +25,16 @@ def main():
     habitacion_bomba.norte.activa = True
     habitacion_bomba.norte.entrar()
 
+    print("\n--- Probando Abstract Factory con LaberintoBombasFactory ---")
+    from laberinto_bombas_factory import LaberintoBombasFactory
+    juego_abstract = Juego(LaberintoBombasFactory())
+    laberinto_abstract = juego_abstract.crear_laberinto_demo()
+    habitacion_abstract = laberinto_abstract.habitaciones[0]
+    print("Probando el norte (esperando pared_bomba directa del Abstract Factory):")
+    if hasattr(habitacion_abstract.norte, 'activa'):
+        habitacion_abstract.norte.activa = True
+    habitacion_abstract.norte.entrar()
+
 
     print("\nProbando el este:")
     habitacion_1.este.entrar()
