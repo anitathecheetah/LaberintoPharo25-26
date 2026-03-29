@@ -10,3 +10,8 @@ class Perezoso(Modo):
 
     def dormir(self, bicho):
         print(f"El bicho cae en un profundo y largo sueño.")
+
+    def cambiar_modo(self, bicho):
+        from agresivo import Agresivo
+        print("Un rayo mágico enfurece al bicho perezoso...")
+        bicho.cambiar_modo(Agresivo())

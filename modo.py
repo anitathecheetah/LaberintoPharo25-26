@@ -14,3 +14,7 @@ class Modo:
 
     def dormir(self, bicho):
         raise NotImplementedError("Este metodo debe redefinirse")
+
+    def cambiar_modo(self, bicho):
+        raise NotImplementedError("Este metodo debe redefinirse")
+
