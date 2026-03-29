@@ -26,3 +26,9 @@ class Habitacion(Contenedor):
             elem = o.obtener_de(self)
             print(f"{type(o).__name__}: {type(elem).__name__ if elem else None}")
 
+    def recorrer(self, bloque):
+        super().recorrer(bloque)
+        if self.norte: self.norte.recorrer(bloque)
+        if self.sur: self.sur.recorrer(bloque)
+        if self.este: self.este.recorrer(bloque)
+        if self.oeste: self.oeste.recorrer(bloque)
