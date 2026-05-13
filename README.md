@@ -87,7 +87,7 @@ Probando el norte:
 ¡Ouch! Te has chocado contra una pared.
 
 --- Probando Factory Method con JuegoBomba y Decorator ---
-💣 ¡BOOM! La bomba explota.
+ ¡BOOM! La bomba explota.
 
 --- Probando Builder y Director ---
 Builder y Director han ensamblado con éxito un laberinto con 2 habitaciones desde JSON.
