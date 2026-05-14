@@ -13,5 +13,5 @@ class LaberintoFactory:
     def fabricar_pared(self):
         return Pared()
         
-    def fabricar_puerta(self, lado1=None, lado2=None, abierta=False):
-        return Puerta(lado1, lado2, abierta)
+    def fabricar_puerta(self, lado1=None, lado2=None):
+        return Puerta(lado1, lado2)

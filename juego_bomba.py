@@ -11,6 +11,6 @@ class JuegoBomba(Juego):
     def fabricar_pared(self):
         return Bomba(Pared())
         
-    def fabricar_puerta(self, lado1=None, lado2=None, abierta=False):
-        return Bomba(Puerta(lado1, lado2, abierta))
+    def fabricar_puerta(self, lado1=None, lado2=None):
+        return Bomba(Puerta(lado1, lado2))
 

@@ -45,7 +45,7 @@ class LaberintoBuilder(Builder):
         return habitacion
 
     def fabricarPuerta(self, lado1=None, lado2=None):
-        return Puerta(lado1, lado2, abierta=False)
+        return Puerta(lado1, lado2)
 
     def fabricarPared(self):
         return Pared()
