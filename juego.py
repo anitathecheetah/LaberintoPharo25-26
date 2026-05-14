@@ -11,6 +11,7 @@ from laberinto_factory import LaberintoFactory
 class Juego:
     def __init__(self, factory=None):
         self.factory = factory or LaberintoFactory()
+        self.prototipo = None
         self.laberinto = None
         self.bichos = []
         self.personaje = None
@@ -46,6 +47,10 @@ class Juego:
                             remitente.atacar(self.personaje)
                             if self.personaje.esta_vivo():
                                 self.personaje.atacar(remitente)
+
+    def clonar_laberinto(self):
+        """Patrón Prototype: Devuelve un clon del prototipo guardado"""
+        return self.prototipo.clonar() if self.prototipo else None
 
     def fabricar_laberinto(self):
         return self.factory.fabricar_laberinto()
@@ -89,5 +94,6 @@ class Juego:
         laberinto.agregar_habitacion(habitacion_1)
         laberinto.agregar_habitacion(habitacion_2)
 
-        self.laberinto = laberinto
-        return laberinto
+        self.prototipo = laberinto
+        self.laberinto = self.clonar_laberinto()
+        return self.laberinto
