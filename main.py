@@ -46,7 +46,7 @@ def main():
     print("\nProbando el este:")
     habitacion_1.este.entrar()
 
-    habitacion_1.este.abierta = True
+    habitacion_1.este.abrir()
     print("\nAbriendo la puerta y probando otra vez:")
     habitacion_1.este.entrar()
 

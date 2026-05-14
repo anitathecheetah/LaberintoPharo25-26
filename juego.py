@@ -56,8 +56,8 @@ class Juego:
     def fabricar_pared(self):
         return self.factory.fabricar_pared()
 
-    def fabricar_puerta(self, lado1=None, lado2=None, abierta=False):
-        return self.factory.fabricar_puerta(lado1, lado2, abierta)
+    def fabricar_puerta(self, lado1=None, lado2=None):
+        return self.factory.fabricar_puerta(lado1, lado2)
 
     def agregar_bicho(self, bicho):
         self.bichos.append(bicho)
@@ -73,7 +73,7 @@ class Juego:
         habitacion_1 = self.fabricar_habitacion(1)
         habitacion_2 = self.fabricar_habitacion(2)
 
-        puerta = self.fabricar_puerta(habitacion_1, habitacion_2, abierta=False)
+        puerta = self.fabricar_puerta(habitacion_1, habitacion_2)
 
         habitacion_1.poner_en(Norte(), self.fabricar_pared())
         habitacion_1.poner_en(Sur(), self.fabricar_pared())
