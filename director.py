@@ -25,6 +25,10 @@ class Director:
         self.fabricarBichos()
         self.fabricarTuneles()
         self.fabricarPersonajes()
+        
+        self._juego.prototipo = self._juego.laberinto
+        self._juego.laberinto = self._juego.clonar_laberinto()
+        
         return self._juego
 
     def leerArchivo(self, archivo):

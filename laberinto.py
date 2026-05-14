@@ -21,3 +21,8 @@ class Laberinto(Contenedor):
 
     def agregar_bicho(self, bicho):
         self.bichos.append(bicho)
+
+    def clonar(self):
+        """Patrón Prototype: Devuelve una copia profunda del laberinto."""
+        import copy
+        return copy.deepcopy(self)

@@ -129,6 +129,25 @@ def main():
     aventurero.poder = 1000  # Truco de fuerza
     aventurero.atacar(bicho)
 
+    print("\n--- Probando Prototype ---")
+    print("Clonando el laberinto desde el juego actual...")
+    laberinto_clonado = juego.clonar_laberinto()
+    print(f"Habitaciones en original: {len(laberinto.habitaciones)}")
+    print(f"Habitaciones en clon: {len(laberinto_clonado.habitaciones)}")
+    print(f"¿Son el mismo objeto Laberinto en memoria? {'Sí' if laberinto is laberinto_clonado else 'No'}")
+    if len(laberinto.habitaciones) > 0 and len(laberinto_clonado.habitaciones) > 0:
+        son_distintas = laberinto.habitaciones[0] is not laberinto_clonado.habitaciones[0]
+        print(f"¿Las habitaciones internas son copias profundas (distintas instancias)? {'Sí' if son_distintas else 'No'}")
+
+    print("\n--- Probando Proxy + Prototype (Tunel Virtual) ---")
+    from sur import Sur
+    tunel_magico = Tunel(None) # Túnel vacío, clonará al entrar
+    print("Colocando el Túnel Mágico en el Sur de la habitacion_1...")
+    habitacion_1.poner_en(Sur(), tunel_magico)
+    
+    print("El aventurero (con referencia a su juego) intenta entrar en el túnel:")
+    tunel_magico.entrar(aventurero)
+
 
 if __name__ == "__main__":
     main()
