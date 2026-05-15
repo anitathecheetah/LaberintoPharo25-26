@@ -1,0 +1,14 @@
+{
+    "laberinto": [
+        {"tipo": "habitacion", "num": 1}
+    ],
+    "puertas": [],
+    "bichos": [],
+    "tuneles": [],
+    "personajes": [
+        {"nombre": "Heroe con Escudo", "posicion": 1}
+    ],
+    "armaduras": [
+        {"nombre": "Escudo Divino", "defensa": 50, "posicion": 1}
+    ]
+}

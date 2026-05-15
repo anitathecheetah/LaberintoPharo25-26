@@ -18,6 +18,8 @@ class Habitacion(Contenedor):
 
     def entrar(self, alguien=None):
         print(f"Has entrado en la habitacion {self.num}")
+        for hijo in self.hijos:
+            hijo.entrar(alguien)
 
     def poner_en(self, orientacion, elemento):
         # El patrón Strategy en accion delegando a la orientación
