@@ -148,6 +148,22 @@ def main():
     print("El aventurero (con referencia a su juego) intenta entrar en el túnel:")
     tunel_magico.entrar(aventurero)
 
+    print("\n--- Probando Visitor ---")
+    from visitor_abrir_puertas import VisitorAbrirPuertas
+    from visitor_cerrar_puertas import VisitorCerrarPuertas
+
+    visitor_abrir = VisitorAbrirPuertas()
+    print("Visitando el laberinto para ABRIR todas las puertas...")
+    laberinto.aceptar(visitor_abrir)
+    print("Probando el este de habitacion_1 (debería estar abierta por el Visitor):")
+    habitacion_1.este.entrar()
+
+    visitor_cerrar = VisitorCerrarPuertas()
+    print("Visitando el laberinto para CERRAR todas las puertas...")
+    laberinto.aceptar(visitor_cerrar)
+    print("Probando el este de habitacion_1 (debería estar cerrada por el Visitor):")
+    habitacion_1.este.entrar()
+
 
 if __name__ == "__main__":
     main()

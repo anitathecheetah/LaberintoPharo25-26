@@ -18,3 +18,11 @@ class Contenedor(ElementoMapa):
         super().recorrer(bloque)
         for hijo in self.hijos:
             hijo.recorrer(bloque)
+
+    def aceptar(self, visitor):
+        self.aceptar_contenedor(visitor)
+        for hijo in self.hijos:
+            hijo.aceptar(visitor)
+
+    def aceptar_contenedor(self, visitor):
+        pass

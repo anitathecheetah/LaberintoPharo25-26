@@ -34,3 +34,13 @@ class Habitacion(Contenedor):
         if self.sur: self.sur.recorrer(bloque)
         if self.este: self.este.recorrer(bloque)
         if self.oeste: self.oeste.recorrer(bloque)
+
+    def aceptar(self, visitor):
+        super().aceptar(visitor)
+        if self.norte: self.norte.aceptar(visitor)
+        if self.sur: self.sur.aceptar(visitor)
+        if self.este: self.este.aceptar(visitor)
+        if self.oeste: self.oeste.aceptar(visitor)
+
+    def aceptar_contenedor(self, visitor):
+        visitor.visitar_habitacion(self)
