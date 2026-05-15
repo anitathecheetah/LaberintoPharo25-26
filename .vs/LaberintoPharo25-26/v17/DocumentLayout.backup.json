@@ -3,12 +3,156 @@
   "WorkspaceRootPath": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab2hab1bic1tun1per.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:laberintos\\lab2hab1bic1tun1per.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\varita.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:varita.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\tunel.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tunel.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\sur.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sur.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\puerta_bomba.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:puerta_bomba.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\puerta.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:puerta.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\personaje.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:personaje.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\perezoso.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:perezoso.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\pared_bomba.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pared_bomba.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\pared.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pared.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\orientacion.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:orientacion.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\oeste.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:oeste.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\norte.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:norte.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\modo.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:modo.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\main2.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main2.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\main_json.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main_json.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\main.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberinto_factory.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:laberinto_factory.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberinto_builder.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:laberinto_builder.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberinto_bombas_factory.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:laberinto_bombas_factory.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberinto.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:laberinto.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\juego_bomba.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:juego_bomba.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\juego.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:juego.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\hoja.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:hoja.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\hechizo.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:hechizo.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\forma.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:forma.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\este.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:este.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\ente.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ente.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\elemento_mapa.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:elemento_mapa.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\director.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:director.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\decorator.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:decorator.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\cuadrado.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cuadrado.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\contenedor.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:contenedor.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\builder.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:builder.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\bomba.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bomba.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\bicho_adapter.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bicho_adapter.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\bicho.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bicho.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\agresivo.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:agresivo.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab2hab1bic1tun1per.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:laberintos\\lab2hab1bic1tun1per.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab_completo.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -21,10 +165,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\ente.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ente.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,47 +174,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 91,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "lab2hab1bic1tun1per.json",
-              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab2hab1bic1tun1per.json",
-              "RelativeDocumentMoniker": "laberintos\\lab2hab1bic1tun1per.json",
-              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab2hab1bic1tun1per.json",
-              "RelativeToolTip": "laberintos\\lab2hab1bic1tun1per.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-29T15:28:02.186Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "lab_completo.json",
-              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab_completo.json",
-              "RelativeDocumentMoniker": "laberintos\\lab_completo.json",
-              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab_completo.json",
-              "RelativeToolTip": "laberintos\\lab_completo.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-29T15:21:00.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "main_json.py",
-              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\main_json.py",
-              "RelativeDocumentMoniker": "main_json.py",
-              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\main_json.py",
-              "RelativeToolTip": "main_json.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-03-29T15:20:01.296Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -101,33 +202,404 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "lab2hab2b.json",
-              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab2hab2b.json",
-              "RelativeDocumentMoniker": "laberintos\\lab2hab2b.json",
-              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab2hab2b.json",
-              "RelativeToolTip": "laberintos\\lab2hab2b.json",
+              "DocumentIndex": 0,
+              "Title": "varita.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\varita.py",
+              "RelativeDocumentMoniker": "varita.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\varita.py",
+              "RelativeToolTip": "varita.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-29T15:18:06.694Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:44:07.622Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "README.md",
-              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\README.md",
-              "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\README.md",
-              "RelativeToolTip": "README.md",
+              "DocumentIndex": 1,
+              "Title": "tunel.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\tunel.py",
+              "RelativeDocumentMoniker": "tunel.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\tunel.py",
+              "RelativeToolTip": "tunel.py",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:44:01.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "sur.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\sur.py",
+              "RelativeDocumentMoniker": "sur.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\sur.py",
+              "RelativeToolTip": "sur.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-03-29T15:18:03.198Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:57.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "puerta_bomba.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\puerta_bomba.py",
+              "RelativeDocumentMoniker": "puerta_bomba.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\puerta_bomba.py",
+              "RelativeToolTip": "puerta_bomba.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:55.44Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "personaje.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\personaje.py",
+              "RelativeDocumentMoniker": "personaje.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\personaje.py",
+              "RelativeToolTip": "personaje.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:47.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "puerta.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\puerta.py",
+              "RelativeDocumentMoniker": "puerta.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\puerta.py",
+              "RelativeToolTip": "puerta.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:46.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "perezoso.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\perezoso.py",
+              "RelativeDocumentMoniker": "perezoso.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\perezoso.py",
+              "RelativeToolTip": "perezoso.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:39.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "pared_bomba.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\pared_bomba.py",
+              "RelativeDocumentMoniker": "pared_bomba.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\pared_bomba.py",
+              "RelativeToolTip": "pared_bomba.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:37.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "pared.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\pared.py",
+              "RelativeDocumentMoniker": "pared.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\pared.py",
+              "RelativeToolTip": "pared.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:35.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "orientacion.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\orientacion.py",
+              "RelativeDocumentMoniker": "orientacion.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\orientacion.py",
+              "RelativeToolTip": "orientacion.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:34.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "oeste.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\oeste.py",
+              "RelativeDocumentMoniker": "oeste.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\oeste.py",
+              "RelativeToolTip": "oeste.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:33.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "norte.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\norte.py",
+              "RelativeDocumentMoniker": "norte.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\norte.py",
+              "RelativeToolTip": "norte.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:26.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "modo.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\modo.py",
+              "RelativeDocumentMoniker": "modo.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\modo.py",
+              "RelativeToolTip": "modo.py",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:25.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "main2.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\main2.py",
+              "RelativeDocumentMoniker": "main2.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\main2.py",
+              "RelativeToolTip": "main2.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:23.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "main.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\main.py",
+              "RelativeDocumentMoniker": "main.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\main.py",
+              "RelativeToolTip": "main.py",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:19.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "laberinto_factory.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberinto_factory.py",
+              "RelativeDocumentMoniker": "laberinto_factory.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberinto_factory.py",
+              "RelativeToolTip": "laberinto_factory.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:18.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "laberinto_builder.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberinto_builder.py",
+              "RelativeDocumentMoniker": "laberinto_builder.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberinto_builder.py",
+              "RelativeToolTip": "laberinto_builder.py",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:02.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "laberinto_bombas_factory.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberinto_bombas_factory.py",
+              "RelativeDocumentMoniker": "laberinto_bombas_factory.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberinto_bombas_factory.py",
+              "RelativeToolTip": "laberinto_bombas_factory.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:01.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "laberinto.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberinto.py",
+              "RelativeDocumentMoniker": "laberinto.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberinto.py",
+              "RelativeToolTip": "laberinto.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:43:00.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "main_json.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\main_json.py",
+              "RelativeDocumentMoniker": "main_json.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\main_json.py",
+              "RelativeToolTip": "main_json.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:20:01.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "juego_bomba.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\juego_bomba.py",
+              "RelativeDocumentMoniker": "juego_bomba.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\juego_bomba.py",
+              "RelativeToolTip": "juego_bomba.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:45.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "juego.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\juego.py",
+              "RelativeDocumentMoniker": "juego.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\juego.py",
+              "RelativeToolTip": "juego.py",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:44.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "hoja.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\hoja.py",
+              "RelativeDocumentMoniker": "hoja.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\hoja.py",
+              "RelativeToolTip": "hoja.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:42.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "hechizo.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\hechizo.py",
+              "RelativeDocumentMoniker": "hechizo.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\hechizo.py",
+              "RelativeToolTip": "hechizo.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:40.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "forma.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\forma.py",
+              "RelativeDocumentMoniker": "forma.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\forma.py",
+              "RelativeToolTip": "forma.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:38.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "este.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\este.py",
+              "RelativeDocumentMoniker": "este.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\este.py",
+              "RelativeToolTip": "este.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:37.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "elemento_mapa.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\elemento_mapa.py",
+              "RelativeDocumentMoniker": "elemento_mapa.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\elemento_mapa.py",
+              "RelativeToolTip": "elemento_mapa.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:28.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "director.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\director.py",
+              "RelativeDocumentMoniker": "director.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\director.py",
+              "RelativeToolTip": "director.py",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:22.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "decorator.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\decorator.py",
+              "RelativeDocumentMoniker": "decorator.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\decorator.py",
+              "RelativeToolTip": "decorator.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:20.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "cuadrado.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\cuadrado.py",
+              "RelativeDocumentMoniker": "cuadrado.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\cuadrado.py",
+              "RelativeToolTip": "cuadrado.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:15.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "contenedor.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\contenedor.py",
+              "RelativeDocumentMoniker": "contenedor.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\contenedor.py",
+              "RelativeToolTip": "contenedor.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:13.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "builder.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\builder.py",
+              "RelativeDocumentMoniker": "builder.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\builder.py",
+              "RelativeToolTip": "builder.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:12.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "bomba.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\bomba.py",
+              "RelativeDocumentMoniker": "bomba.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\bomba.py",
+              "RelativeToolTip": "bomba.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:07.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "ente.py",
               "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\ente.py",
               "RelativeDocumentMoniker": "ente.py",
@@ -135,8 +607,91 @@
               "RelativeToolTip": "ente.py",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-03-29T15:16:15.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-29T15:16:15.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "bicho_adapter.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\bicho_adapter.py",
+              "RelativeDocumentMoniker": "bicho_adapter.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\bicho_adapter.py",
+              "RelativeToolTip": "bicho_adapter.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:05.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "bicho.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\bicho.py",
+              "RelativeDocumentMoniker": "bicho.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\bicho.py",
+              "RelativeToolTip": "bicho.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:04.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "agresivo.py",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\agresivo.py",
+              "RelativeDocumentMoniker": "agresivo.py",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\agresivo.py",
+              "RelativeToolTip": "agresivo.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-03-29T15:42:02.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "lab2hab1bic1tun1per.json",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab2hab1bic1tun1per.json",
+              "RelativeDocumentMoniker": "laberintos\\lab2hab1bic1tun1per.json",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab2hab1bic1tun1per.json",
+              "RelativeToolTip": "laberintos\\lab2hab1bic1tun1per.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-29T15:28:02.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "lab_completo.json",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab_completo.json",
+              "RelativeDocumentMoniker": "laberintos\\lab_completo.json",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab_completo.json",
+              "RelativeToolTip": "laberintos\\lab_completo.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-29T15:21:00.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "lab2hab2b.json",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab2hab2b.json",
+              "RelativeDocumentMoniker": "laberintos\\lab2hab2b.json",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\laberintos\\lab2hab2b.json",
+              "RelativeToolTip": "laberintos\\lab2hab2b.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-29T15:18:06.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\Ana Mar\u00EDa\\source\\repos\\LaberintoPharo25-26\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-03-29T15:18:03.198Z"
             }
           ]
         },

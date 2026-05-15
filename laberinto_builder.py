@@ -55,6 +55,7 @@ class LaberintoBuilder(Builder):
         from sur import Sur
         from este import Este
         from oeste import Oeste
+        from abrir import Abrir
 
         lado1 = self.laberinto.obtener_habitacion(num1)
         lado2 = self.laberinto.obtener_habitacion(num2)
@@ -65,6 +66,11 @@ class LaberintoBuilder(Builder):
         puerta = self.fabricarPuerta(lado1, lado2)
         lado1.poner_en(self.str_to_orientacion(or1), puerta)
         lado2.poner_en(self.str_to_orientacion(or2), puerta)
+        
+        cmd = Abrir()
+        cmd.receptor = puerta
+        puerta.agregar_comando(cmd)
+        
         return puerta
 
     def fabricarBichoModo(self, str_modo, posicion):
