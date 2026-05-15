@@ -108,5 +108,12 @@ class LaberintoBuilder(Builder):
             personaje.juego = self.juego
             self.juego.personaje = personaje
 
+    def fabricarArmadura(self, num_hab, nombre, defensa):
+        from armadura import Armadura
+        hab = self.laberinto.obtener_habitacion(num_hab)
+        if hab:
+            armadura = Armadura(nombre, defensa)
+            hab.agregarHijo(armadura)
+
     def obtenerLaberinto(self):
         return self.laberinto

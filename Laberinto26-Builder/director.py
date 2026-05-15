@@ -25,6 +25,7 @@ class Director:
         self.fabricarBichos()
         self.fabricarTuneles()
         self.fabricarPersonajes()
+        self.fabricarArmaduras()
         
         self._juego.prototipo = self._juego.laberinto
         self._juego.laberinto = self._juego.clonar_laberinto()
@@ -93,6 +94,14 @@ class Director:
             nombre = p_data.get("nombre", "Heroe")
             pos = p_data.get("posicion", 1)
             self._builder.fabricarPersonaje(nombre, pos)
+
+    def fabricarArmaduras(self):
+        armaduras_data = self._dict.get("armaduras", [])
+        for a_data in armaduras_data:
+            nombre = a_data.get("nombre", "Armadura Basica")
+            defensa = a_data.get("defensa", 10)
+            posicion = a_data.get("posicion", 1)
+            self._builder.fabricarArmadura(posicion, nombre, defensa)
 
     def __str__(self):
         return f"Director con builder={self._builder}"
