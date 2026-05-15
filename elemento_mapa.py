@@ -12,3 +12,6 @@ class ElementoMapa:
     def recorrer(self, bloque):
         if callable(bloque):
             bloque(self)
+
+    def aceptar(self, visitor):
+        pass

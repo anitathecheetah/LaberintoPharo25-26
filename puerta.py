@@ -37,3 +37,6 @@ class Puerta(Hoja):
         n1 = self.lado1.num if self.lado1 and hasattr(self.lado1, 'num') else "?"
         n2 = self.lado2.num if self.lado2 and hasattr(self.lado2, 'num') else "?"
         return f"Puerta-{n1}-{n2}"
+
+    def aceptar(self, visitor):
+        visitor.visitar_puerta(self)

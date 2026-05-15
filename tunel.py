@@ -41,3 +41,6 @@ class Tunel(Hoja):
         bloque(self)
         if self.laberinto is not None:
             self.laberinto.recorrer(bloque)
+
+    def aceptar(self, visitor):
+        visitor.visitar_tunel(self)

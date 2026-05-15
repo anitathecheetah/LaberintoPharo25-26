@@ -12,3 +12,6 @@ class Bomba(Decorator):
             print(f"Pasas por {type(self.component).__name__} con una bomba inactiva.")
         # Llamar al componente original después (o antes) de la acción del decorador
         super().entrar(alguien)
+
+    def aceptar(self, visitor):
+        visitor.visitar_bomba(self)
