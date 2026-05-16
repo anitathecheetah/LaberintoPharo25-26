@@ -27,8 +27,12 @@ class Juego:
         elif evento == "derrotado":
             print(f"JUEGO (Mediador): Certificado de defunción emitido para {remitente.nombre if hasattr(remitente, 'nombre') else remitente.__class__.__name__}.")
             from personaje import Personaje
+            from bicho import Bicho
             if isinstance(remitente, Personaje):
                 self.fase.personaje_derrotado()
+            elif isinstance(remitente, Bicho):
+                if hasattr(self.fase, 'enemigo_derrotado'):
+                    self.fase.enemigo_derrotado(remitente)
         elif evento == "entrar_habitacion":
             habitacion = datos
             self.fase.entrar_habitacion(remitente, habitacion)
@@ -50,6 +54,7 @@ class Juego:
         return self.factory.fabricar_puerta(lado1, lado2)
 
     def agregar_bicho(self, bicho):
+        bicho.juego = self
         self.bichos.append(bicho)
 
     def obtener_habitacion(self, numero):

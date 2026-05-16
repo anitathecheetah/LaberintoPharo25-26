@@ -1,0 +1,67 @@
+{
+    "forma": "poligono4",
+    "laberinto": [
+        {
+            "tipo": "habitacion",
+            "num": 1,
+            "hijos": []
+        },
+        {
+            "tipo": "habitacion",
+            "num": 2,
+            "hijos": [
+                {
+                    "tipo": "armario",
+                    "hijos": [
+                        {
+                            "tipo": "armadura",
+                            "nombre": "Escudo y Espada de Papá Noel",
+                            "defensa": 50
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "tipo": "habitacion",
+            "num": 3,
+            "hijos": [
+                {
+                    "tipo": "armario",
+                    "hijos": [
+                        {
+                            "tipo": "bicho",
+                            "nombre": "Bruja Blanca",
+                            "modo": "agresivo"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "puertas": [
+        [1, "norte", 2, "sur"],
+        [2, "este", 3, "oeste"]
+    ],
+    "bichos": [],
+    "personajes": [
+        {
+            "nombre": "Peter Pevensie",
+            "posicion": 1
+        }
+    ],
+    "aliados": [
+        {
+            "nombre": "Aslan",
+            "escudo": 1000,
+            "posicion": 2
+        }
+    ],
+    "armaduras": [
+        {
+            "nombre": "Armadura Liguera Narniana",
+            "defensa": 20,
+            "posicion": 1
+        }
+    ]
+}

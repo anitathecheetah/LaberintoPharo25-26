@@ -26,6 +26,7 @@ class Director:
         self.fabricarTuneles()
         self.fabricarPersonajes()
         self.fabricarArmaduras()
+        self.fabricarAliados()
         
         self._juego.prototipo = self._juego.laberinto
         self._juego.laberinto = self._juego.clonar_laberinto()
@@ -63,6 +64,27 @@ class Director:
 
         if tipo == "habitacion":
             contenedor = self._builder.fabricarHabitacion(dic.get("num", 0))
+        elif tipo == "armario":
+            contenedor = self._builder.fabricarArmario(padre)
+        elif tipo == "bicho":
+            # Bicho creado como hijo de un contenedor (ej. dentro de un armario)
+            modo_str = dic.get("modo", "Agresivo")
+            nombre = dic.get("nombre", "Bicho")
+            from bicho import Bicho
+            from agresivo import Agresivo
+            from perezoso import Perezoso
+            modo = Agresivo() if modo_str.lower() == "agresivo" else Perezoso()
+            bicho = Bicho(modo)
+            bicho.nombre = nombre
+            if padre:
+                padre.agregarHijo(bicho)
+            # No lo añadimos al juego todavía hasta que salga del armario
+
+        elif tipo == "armadura":
+            from armadura import Armadura
+            armadura = Armadura(dic.get("nombre", "Armadura"), dic.get("defensa", 10))
+            if padre:
+                padre.agregarHijo(armadura)
 
         hijos = dic.get("hijos", [])
         for hijo in hijos:
@@ -102,6 +124,14 @@ class Director:
             defensa = a_data.get("defensa", 10)
             posicion = a_data.get("posicion", 1)
             self._builder.fabricarArmadura(posicion, nombre, defensa)
+
+    def fabricarAliados(self):
+        aliados_data = self._dict.get("aliados", [])
+        for aliado_data in aliados_data:
+            nombre = aliado_data.get("nombre", "Aslan")
+            escudo = aliado_data.get("escudo", 1000)
+            posicion = aliado_data.get("posicion", 1)
+            self._builder.fabricarAliado(posicion, nombre, escudo)
 
     def __str__(self):
         return f"Director con builder={self._builder}"
