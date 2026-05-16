@@ -30,7 +30,7 @@ class LaberintoBuilder(Builder):
         }
         return estrategias.get(orientacion_str.lower())
 
-    def fabricarHabitacion(self, num, tipo="habitacion"):
+    def fabricarHabitacion(self, num, tipo="habitacion", dano=5):
         from norte import Norte
         from sur import Sur
         from este import Este
@@ -38,7 +38,7 @@ class LaberintoBuilder(Builder):
 
         if tipo == "habitacion_trampa":
             from habitacion_trampa import HabitacionTrampa
-            habitacion = HabitacionTrampa(num, dano=5)
+            habitacion = HabitacionTrampa(num, dano=dano)
         else:
             habitacion = Habitacion(num)
             
@@ -78,7 +78,7 @@ class LaberintoBuilder(Builder):
         
         return puerta
 
-    def fabricarBichoModo(self, str_modo, posicion):
+    def fabricarBichoModo(self, str_modo, posicion, vidas=100, poder=10):
         if str_modo.lower() == "agresivo":
             modo = Agresivo()
         elif str_modo.lower() == "perezoso":
@@ -90,7 +90,7 @@ class LaberintoBuilder(Builder):
         if habitacion is None:
             raise ValueError(f"No existe la habitacion {posicion} para ubicar el bicho")
 
-        bicho = Bicho(modo)
+        bicho = Bicho(modo, vidas, poder)
         bicho.posicion = habitacion
         self.juego.agregar_bicho(bicho)
         self.laberinto.agregar_bicho(bicho)

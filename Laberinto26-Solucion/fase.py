@@ -72,7 +72,7 @@ class Jugando(Fase):
 
     def enemigo_derrotado(self, enemigo):
         nombre = enemigo.nombre if hasattr(enemigo, 'nombre') else ''
-        if nombre == "Bruja Blanca":
+        if "Bruja Blanca" in nombre:
             print(f"¡Has derrotado a la {nombre}!")
             self.personaje_gana()
 
