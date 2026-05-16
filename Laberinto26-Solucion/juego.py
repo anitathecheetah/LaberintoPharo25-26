@@ -15,6 +15,8 @@ class Juego:
         self.laberinto = None
         self.bichos = []
         self.personaje = None
+        from fase import Inicial
+        self.fase = Inicial(self)
 
     def notificar(self, remitente, evento, datos=None):
         """Método de mediación central (Patrón Mediator)"""
@@ -24,29 +26,12 @@ class Juego:
             objetivo.recibir_dano(remitente.poder)
         elif evento == "derrotado":
             print(f"JUEGO (Mediador): Certificado de defunción emitido para {remitente.nombre if hasattr(remitente, 'nombre') else remitente.__class__.__name__}.")
+            from personaje import Personaje
+            if isinstance(remitente, Personaje):
+                self.fase.personaje_derrotado()
         elif evento == "entrar_habitacion":
             habitacion = datos
-            print(f"JUEGO (Mediador): Sistema centralizado detecta movimiento hacia la habitación {habitacion.num}.")
-            
-            from personaje import Personaje
-            from bicho import Bicho
-            if isinstance(remitente, Personaje):
-                for bicho in list(self.bichos):
-                    if bicho.posicion == habitacion and bicho.esta_vivo():
-                        print(f" ¡EMBOSCADA! {remitente.nombre} se topa con un {bicho.__class__.__name__} en la habitación {habitacion.num}.")
-                        while remitente.esta_vivo() and bicho.esta_vivo():
-                            remitente.atacar(bicho)
-                            if bicho.esta_vivo():
-                                bicho.atacar(remitente)
-                                
-            elif isinstance(remitente, Bicho):
-                if hasattr(self, 'personaje') and self.personaje and self.personaje.posicion == habitacion:
-                    if self.personaje.esta_vivo() and remitente.esta_vivo():
-                        print(f" ¡EMBOSCADA! Un {remitente.__class__.__name__} ha sorprendido a {self.personaje.nombre} en la habitación {habitacion.num}.")
-                        while remitente.esta_vivo() and self.personaje.esta_vivo():
-                            remitente.atacar(self.personaje)
-                            if self.personaje.esta_vivo():
-                                self.personaje.atacar(remitente)
+            self.fase.entrar_habitacion(remitente, habitacion)
 
     def clonar_laberinto(self):
         """Patrón Prototype: Devuelve un clon del prototipo guardado"""
