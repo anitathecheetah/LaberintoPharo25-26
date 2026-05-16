@@ -30,9 +30,10 @@ class Armadura(Hoja, ManejadorDano):
             return cantidad
 
     def entrar(self, alguien=None):
-        if alguien is not None and hasattr(alguien, 'equipar_defensa'):
+        if not getattr(self, 'equipada', False) and alguien is not None and hasattr(alguien, 'equipar_defensa'):
             print(f"{alguien.__class__.__name__} encuentra una armadura: {self.nombre} (+{self.defensa_maxima} DEF)")
             alguien.equipar_defensa(self)
+            self.equipada = True
             
     def aceptar(self, visitor):
         if hasattr(visitor, 'visitar_armadura'):

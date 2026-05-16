@@ -17,7 +17,7 @@ class Aliado(Hoja, ManejadorDano):
     def entrar(self, alguien):
         from personaje import Personaje
         if isinstance(alguien, Personaje) and not self.encontrado:
-            print(f"!!! Has encontrado a tu poderoso aliado: {self.nombre} !!!")
+            print(f"!!! Has encontrado a tu poderoso aliado: {self.nombre} 🦁 !!!")
             print(f"--> {self.nombre} te protegerá en la batalla final.")
             alguien.equipar_defensa(self)
             self.encontrado = True
@@ -26,13 +26,22 @@ class Aliado(Hoja, ManejadorDano):
 
     def gestionar_dano(self, cantidad):
         if self.escudo > 0:
-            print(f"[{self.nombre}] se interpone heroicamente y recibe el golpe de {cantidad} de daño dirigido a ti!")
-            self.escudo -= cantidad
+            dano_bloqueado = min(cantidad, self.escudo)
+            self.escudo -= dano_bloqueado
+            cantidad_restante = cantidad - dano_bloqueado
+            
+            print(f"[{self.nombre}] se interpone heroicamente y bloquea {dano_bloqueado} de daño!")
+            
             if self.escudo <= 0:
-                print(f"[{self.nombre}] ha recibido una herida mortal y se ha sacrificado para salvarte... 😭")
+                print(f"[{self.nombre}] ha recibido una herida mortal y se ha sacrificado para salvarte... T_T")
                 from estado_ente import Muerto
                 self.estado = Muerto()
-            return 0
+                
+            if cantidad_restante > 0 and self.sucesor is not None:
+                return self.sucesor.gestionar_dano(cantidad_restante)
+            else:
+                return cantidad_restante
+        elif self.sucesor is not None:
+            return self.sucesor.gestionar_dano(cantidad)
         else:
-            # Si el aliado ya no puede protegerte, el daño pasa al siguiente en la cadena
-            return super().gestionar_dano(cantidad)
+            return cantidad

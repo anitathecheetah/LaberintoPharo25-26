@@ -29,8 +29,8 @@ class TestNarnia(unittest.TestCase):
 
         hab1 = juego.obtener_habitacion(1)
         hab1.entrar(personaje)
-        # La vida base es 100. Con la poción debería subir a 150.
-        self.assertEqual(personaje.vidas, 150)
+        # La vida base es 100. Con la poción debería subir a 200.
+        self.assertEqual(personaje.vidas, 200)
 
         # 2. Ir a la habitación 4 (Invierno Eterno) para coger el Cuerno de Susan
         puerta_1_4 = Este().obtener_de(hab1)
@@ -40,10 +40,10 @@ class TestNarnia(unittest.TestCase):
         
         hab4 = juego.obtener_habitacion(4)
         # El daño fue 5, pero la Armadura de Narnia que se recoge en la hab1 lo absorbe!
-        # Por lo tanto, la vida sigue siendo 150
-        self.assertEqual(personaje.vidas, 150)
-        # La armadura empezó con 20 de defensa, ahora tiene 15
-        self.assertEqual(personaje.defensas.defensa_actual, 15)
+        # Por lo tanto, la vida sigue siendo 200
+        self.assertEqual(personaje.vidas, 200)
+        # La armadura empezó con 50 de defensa, ahora tiene 45
+        self.assertEqual(personaje.defensas.defensa_actual, 45)
         
         # La llave (Cuerno) ya se activó al entrar en la habitación 4, 
         # desbloqueando la puerta entre 2 y 3.
@@ -64,7 +64,7 @@ class TestNarnia(unittest.TestCase):
         hab2 = juego.obtener_habitacion(2)
         # Se equipa a Aslan y el Escudo
         self.assertEqual(personaje.defensas.nombre, "Aslan")
-        self.assertEqual(personaje.defensas.sucesor.nombre, "Escudo y Espada de Papá Noel")
+        self.assertEqual(personaje.defensas.sucesor.nombre, "Escudo de Papá Noel 🛡️")
 
         # 4. Ir a la habitación 3 (Batalla Final)
         puerta_2_3.abrir() # Antes no se podía, pero gracias al Cuerno, sí

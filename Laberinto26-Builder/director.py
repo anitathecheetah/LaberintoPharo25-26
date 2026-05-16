@@ -70,18 +70,21 @@ class Director:
         contenedor = padre
 
         if tipo == "habitacion" or tipo == "habitacion_trampa":
-            contenedor = self._builder.fabricarHabitacion(dic.get("num", 0), tipo=tipo)
+            dano = dic.get("dano", 5)
+            contenedor = self._builder.fabricarHabitacion(dic.get("num", 0), tipo=tipo, dano=dano)
         elif tipo == "armario":
             contenedor = self._builder.fabricarArmario(padre)
         elif tipo == "bicho":
             # Bicho creado como hijo de un contenedor (ej. dentro de un armario)
             modo_str = dic.get("modo", "Agresivo")
             nombre = dic.get("nombre", "Bicho")
+            poder = dic.get("poder", 10)
+            vidas = dic.get("vidas", 100)
             from bicho import Bicho
             from agresivo import Agresivo
             from perezoso import Perezoso
             modo = Agresivo() if modo_str.lower() == "agresivo" else Perezoso()
-            bicho = Bicho(modo)
+            bicho = Bicho(modo, vidas, poder)
             bicho.nombre = nombre
             if padre:
                 padre.agregarHijo(bicho)
@@ -119,7 +122,9 @@ class Director:
         for bicho_data in bichos_data:
             modo = bicho_data.get("modo", "Agresivo")
             posicion = bicho_data.get("posicion", 1)
-            self._builder.fabricarBichoModo(modo, posicion)
+            poder = bicho_data.get("poder", 10)
+            vidas = bicho_data.get("vidas", 100)
+            self._builder.fabricarBichoModo(modo, posicion, vidas, poder)
 
     def fabricarTuneles(self):
         tuneles_data = self._dict.get("tuneles", [])

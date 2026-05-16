@@ -14,7 +14,7 @@ class Pocion(Hoja):
     def entrar(self, alguien):
         from personaje import Personaje
         if isinstance(alguien, Personaje) and not self.usada:
-            print(f"*** ¡Has encontrado {self.nombre}! ***")
+            print(f"*** ¡Has encontrado {self.nombre}! 🧪 ***")
             alguien.vidas += self.curacion
             print(f"{alguien.nombre} recupera {self.curacion} vidas. (Vidas actuales: {alguien.vidas})")
             self.usada = True
