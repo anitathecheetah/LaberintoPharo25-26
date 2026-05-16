@@ -12,6 +12,10 @@ from director import Director
 from personaje import Personaje
 from armario import Armario
 from fase import Final
+from norte import Norte
+from sur import Sur
+from este import Este
+from oeste import Oeste
 
 class TestNarnia(unittest.TestCase):
     def test_historia_narnia(self):
@@ -23,32 +27,54 @@ class TestNarnia(unittest.TestCase):
         self.assertEqual(personaje.nombre, "Peter Pevensie")
         self.assertEqual(personaje.posicion.num, 1)
 
-        # 2. Ir a la habitacion 2 y encontrar a Aslan
-        hab2 = juego.obtener_habitacion(2)
-        personaje.moverse_a(hab2) # Esto dispara "entrar_habitacion"
-        hab2.entrar(personaje) # Para interactuar con los elementos de la habitación
-        
-        # Como hay un Aliado en hab2, debería estar en la cadena de defensas
-        self.assertNotEqual(personaje.defensas, personaje)
-        self.assertEqual(personaje.defensas.nombre, "Aslan")
+        hab1 = juego.obtener_habitacion(1)
+        hab1.entrar(personaje)
+        # La vida base es 100. Con la poción debería subir a 150.
+        self.assertEqual(personaje.vidas, 150)
 
-        # 3. Entrar al armario de la habitación 2 para equiparse el escudo
-        # hab2.entrar(personaje) ya ha recorrido los hijos y abierto el armario
+        # 2. Ir a la habitación 4 (Invierno Eterno) para coger el Cuerno de Susan
+        puerta_1_4 = Este().obtener_de(hab1)
+        puerta_1_4.abrir()
+        puerta_1_4.entrar(personaje)
+        personaje.moverse_a(juego.obtener_habitacion(4))
         
-        # Ahora debería tener "Aslan" en la cadena y también "Escudo y Espada"
+        hab4 = juego.obtener_habitacion(4)
+        # El daño fue 5, pero la Armadura de Narnia que se recoge en la hab1 lo absorbe!
+        # Por lo tanto, la vida sigue siendo 150
+        self.assertEqual(personaje.vidas, 150)
+        # La armadura empezó con 20 de defensa, ahora tiene 15
+        self.assertEqual(personaje.defensas.defensa_actual, 15)
+        
+        # La llave (Cuerno) ya se activó al entrar en la habitación 4, 
+        # desbloqueando la puerta entre 2 y 3.
+        puerta_2_3 = Este().obtener_de(juego.obtener_habitacion(2))
+        # Su estado debe ser Cerrada (ya no Bloqueada)
+        self.assertTrue(puerta_2_3.esta_cerrada())
+        self.assertEqual(str(puerta_2_3.estado), "Cerrada")
+
+        # 3. Volver a la habitación 1 y luego ir a la 2
+        puerta_1_4.entrar(personaje) # Volvemos a hab 1
+        personaje.moverse_a(juego.obtener_habitacion(1))
+        
+        puerta_1_2 = Norte().obtener_de(juego.obtener_habitacion(1))
+        puerta_1_2.abrir()
+        puerta_1_2.entrar(personaje)
+        personaje.moverse_a(juego.obtener_habitacion(2))
+        
+        hab2 = juego.obtener_habitacion(2)
+        # Se equipa a Aslan y el Escudo
         self.assertEqual(personaje.defensas.nombre, "Aslan")
         self.assertEqual(personaje.defensas.sucesor.nombre, "Escudo y Espada de Papá Noel")
 
-        # 4. Ir a la habitación 3 y abrir el armario de la Bruja
-        hab3 = juego.obtener_habitacion(3)
-        personaje.moverse_a(hab3)
+        # 4. Ir a la habitación 3 (Batalla Final)
+        puerta_2_3.abrir() # Antes no se podía, pero gracias al Cuerno, sí
+        self.assertTrue(puerta_2_3.esta_abierta())
         
-        # Forzar un poder alto a la Bruja y a Peter para el test
-        # Al abrir la habitación (y por tanto el armario), la Bruja sale y empieza el combate
-        hab3.entrar(personaje)
+        puerta_2_3.entrar(personaje)
+        personaje.moverse_a(juego.obtener_habitacion(3))
+        # Al entrar en la 3, el Mediador (Juego) lanza el combate de la Bruja Blanca
         
-        # 5. La Bruja debería haber muerto (y Aslan sacrificar su escudo si el daño fue grande)
-        # 6. El estado del juego debe ser Final (Victoria)
+        # 5. La Bruja debería haber muerto y el estado del juego debe ser Final (Victoria)
         self.assertIsInstance(juego.fase, Final)
         self.assertIn("Bruja Blanca", juego.fase.resultado)
 

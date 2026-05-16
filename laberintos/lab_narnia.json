@@ -4,7 +4,25 @@
         {
             "tipo": "habitacion",
             "num": 1,
-            "hijos": []
+            "hijos": [
+                {
+                    "tipo": "pocion",
+                    "nombre": "Cordial de Flor de Fuego de Lucía",
+                    "curacion": 50
+                }
+            ]
+        },
+        {
+            "tipo": "habitacion_trampa",
+            "num": 4,
+            "hijos": [
+                {
+                    "tipo": "llave",
+                    "nombre": "Cuerno Mágico de Susan",
+                    "puerta_1": 2,
+                    "puerta_2": 3
+                }
+            ]
         },
         {
             "tipo": "habitacion",
@@ -41,7 +59,8 @@
     ],
     "puertas": [
         [1, "norte", 2, "sur"],
-        [2, "este", 3, "oeste"]
+        [1, "este", 4, "oeste"],
+        [2, "este", 3, "oeste", "bloqueada"]
     ],
     "bichos": [],
     "personajes": [
@@ -59,7 +78,7 @@
     ],
     "armaduras": [
         {
-            "nombre": "Armadura Liguera Narniana",
+            "nombre": "Armadura Ligera Narniana",
             "defensa": 20,
             "posicion": 1
         }

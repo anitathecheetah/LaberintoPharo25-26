@@ -31,6 +31,10 @@ class Director:
         self._juego.prototipo = self._juego.laberinto
         self._juego.laberinto = self._juego.clonar_laberinto()
         
+        if self._juego.personaje and hasattr(self._juego.personaje, '_pos_num_inicial'):
+            hab_clonada = self._juego.obtener_habitacion(self._juego.personaje._pos_num_inicial)
+            self._juego.personaje.posicion = hab_clonada
+        
         return self._juego
 
     def leerArchivo(self, archivo):
@@ -54,16 +58,19 @@ class Director:
 
         puertas_data = self._dict.get("puertas", [])
         for puerta in puertas_data:
-            self._builder.fabricarPuertaLado1Or1Lado2Or2(
+            p = self._builder.fabricarPuertaLado1Or1Lado2Or2(
                 puerta[0], puerta[1], puerta[2], puerta[3]
             )
+            if len(puerta) > 4 and puerta[4] == "bloqueada":
+                from estado_puerta import Bloqueada
+                p.estado = Bloqueada()
 
     def fabricarLaberintoRecursivo(self, dic, padre):
         tipo = dic.get("tipo", "")
         contenedor = padre
 
-        if tipo == "habitacion":
-            contenedor = self._builder.fabricarHabitacion(dic.get("num", 0))
+        if tipo == "habitacion" or tipo == "habitacion_trampa":
+            contenedor = self._builder.fabricarHabitacion(dic.get("num", 0), tipo=tipo)
         elif tipo == "armario":
             contenedor = self._builder.fabricarArmario(padre)
         elif tipo == "bicho":
@@ -86,6 +93,12 @@ class Director:
             if padre:
                 padre.agregarHijo(armadura)
 
+        elif tipo == "pocion":
+            self._builder.fabricarPocion(padre, dic.get("nombre", "Pocion"), dic.get("curacion", 50))
+
+        elif tipo == "llave":
+            self._builder.fabricarLlave(padre, dic.get("puerta_1", 1), dic.get("puerta_2", 2), dic.get("nombre", "Llave Mágica"))
+
         hijos = dic.get("hijos", [])
         for hijo in hijos:
             self.fabricarLaberintoRecursivo(hijo, contenedor)
@@ -94,6 +107,11 @@ class Director:
         self._juego = Juego()
         self._juego.laberinto = self._builder.obtenerLaberinto()
         self._builder.juego = self._juego
+        
+        # Añadir observador de Narnia
+        from observador import ProfeciaNarnia
+        profecia = ProfeciaNarnia()
+        self._juego.agregar_observador(profecia)
 
     def fabricarBichos(self):
         bichos_data = self._dict.get("bichos", [])
@@ -115,7 +133,13 @@ class Director:
         for p_data in personajes_data:
             nombre = p_data.get("nombre", "Heroe")
             pos = p_data.get("posicion", 1)
-            self._builder.fabricarPersonaje(nombre, pos)
+            # Primero fabricamos el personaje, su posición se asignará tras clonar
+            from personaje import Personaje
+            personaje = Personaje(nombre)
+            personaje.juego = self._juego
+            # Guardamos el id de la posición para usarlo luego
+            personaje._pos_num_inicial = pos
+            self._juego.personaje = personaje
 
     def fabricarArmaduras(self):
         armaduras_data = self._dict.get("armaduras", [])

@@ -17,6 +17,20 @@ class Juego:
         self.personaje = None
         from fase import Inicial
         self.fase = Inicial(self)
+        self.observadores = []
+
+    def agregar_observador(self, observador):
+        if observador not in self.observadores:
+            self.observadores.append(observador)
+
+    def eliminar_observador(self, observador):
+        if observador in self.observadores:
+            self.observadores.remove(observador)
+
+    def notificar_observadores(self, evento, datos=None):
+        """Patrón Observer: Notifica a los observadores externos de eventos importantes."""
+        for obs in self.observadores:
+            obs.actualizar(evento, datos)
 
     def notificar(self, remitente, evento, datos=None):
         """Método de mediación central (Patrón Mediator)"""
@@ -26,6 +40,7 @@ class Juego:
             objetivo.recibir_dano(remitente.poder)
         elif evento == "derrotado":
             print(f"JUEGO (Mediador): Certificado de defunción emitido para {remitente.nombre if hasattr(remitente, 'nombre') else remitente.__class__.__name__}.")
+            self.notificar_observadores("enemigo_derrotado", remitente)
             from personaje import Personaje
             from bicho import Bicho
             if isinstance(remitente, Personaje):
