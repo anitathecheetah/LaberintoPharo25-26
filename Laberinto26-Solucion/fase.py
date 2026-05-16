@@ -16,6 +16,10 @@ class Fase(ABC):
         pass
 
     @abstractmethod
+    def enemigo_derrotado(self, enemigo):
+        pass
+
+    @abstractmethod
     def personaje_gana(self):
         pass
 
@@ -27,6 +31,9 @@ class Inicial(Fase):
         self.juego.fase.entrar_habitacion(remitente, habitacion)
 
     def personaje_derrotado(self):
+        pass
+
+    def enemigo_derrotado(self, enemigo):
         pass
 
     def personaje_gana(self):
@@ -41,28 +48,19 @@ class Jugando(Fase):
         from bicho import Bicho
         from armario import Armario
         
-        # Verificar condición de victoria: Si el personaje entra en un armario
-        if isinstance(remitente, Personaje):
-            # Buscar armarios en la habitación
-            for hijo in habitacion.hijos:
-                if isinstance(hijo, Armario):
-                    print("¡El personaje ha encontrado el Armario de salida!")
-                    self.personaje_gana()
-                    return
-
-            # Lógica de combate
-            for bicho in list(self.juego.bichos):
-                if bicho.posicion == habitacion and bicho.esta_vivo():
-                    print(f" ¡EMBOSCADA! {remitente.nombre if hasattr(remitente, 'nombre') else 'El personaje'} se topa con un {bicho.__class__.__name__} en la habitación {habitacion.num}.")
-                    while remitente.esta_vivo() and bicho.esta_vivo():
-                        remitente.atacar(bicho)
-                        if bicho.esta_vivo():
-                            bicho.atacar(remitente)
-                            
-        elif isinstance(remitente, Bicho):
+        # Lógica de combate
+        for bicho in list(self.juego.bichos):
+            if bicho.posicion == habitacion and bicho.esta_vivo():
+                print(f" ¡EMBOSCADA! {remitente.nombre if hasattr(remitente, 'nombre') else 'El personaje'} se topa con un {bicho.__class__.__name__} ({bicho.nombre if hasattr(bicho, 'nombre') else ''}) en la habitación {habitacion.num}.")
+                while remitente.esta_vivo() and bicho.esta_vivo():
+                    remitente.atacar(bicho)
+                    if bicho.esta_vivo():
+                        bicho.atacar(remitente)
+                        
+        if isinstance(remitente, Bicho):
             if hasattr(self.juego, 'personaje') and self.juego.personaje and self.juego.personaje.posicion == habitacion:
                 if self.juego.personaje.esta_vivo() and remitente.esta_vivo():
-                    print(f" ¡EMBOSCADA! Un {remitente.__class__.__name__} ha sorprendido al personaje en la habitación {habitacion.num}.")
+                    print(f" ¡EMBOSCADA! Un {remitente.__class__.__name__} ({remitente.nombre if hasattr(remitente, 'nombre') else ''}) ha sorprendido al personaje en la habitación {habitacion.num}.")
                     while remitente.esta_vivo() and self.juego.personaje.esta_vivo():
                         remitente.atacar(self.juego.personaje)
                         if self.juego.personaje.esta_vivo():
@@ -72,9 +70,15 @@ class Jugando(Fase):
         print("JUEGO: Transición de fase Jugando -> Final (Derrota)")
         self.juego.fase = Final(self.juego, "Has Muerto")
 
+    def enemigo_derrotado(self, enemigo):
+        nombre = enemigo.nombre if hasattr(enemigo, 'nombre') else ''
+        if nombre == "Bruja Blanca":
+            print(f"¡Has derrotado a la {nombre}!")
+            self.personaje_gana()
+
     def personaje_gana(self):
         print("JUEGO: Transición de fase Jugando -> Final (Victoria)")
-        self.juego.fase = Final(self.juego, "¡Has Ganado!")
+        self.juego.fase = Final(self.juego, "¡Has matado a la Bruja Blanca! Sales del armario y te reencuentras con tu familia en Narnia. ¡Has Ganado!")
 
 class Final(Fase):
     """Fase de fin de juego."""
@@ -87,6 +91,9 @@ class Final(Fase):
         print(f"JUEGO (Fase Final): El juego ha terminado ({self.resultado}). No se registran más movimientos.")
 
     def personaje_derrotado(self):
+        pass
+
+    def enemigo_derrotado(self, enemigo):
         pass
 
     def personaje_gana(self):
