@@ -15,7 +15,9 @@ class Personaje(Ente, ManejadorDano):
         """Final de la cadena de responsabilidad: El cuerpo recibe el daño restante"""
         self.vidas -= cantidad
         print(f"[{self.__class__.__name__}] Ouch! Recibe {cantidad} de daño real. Vidas: {self.vidas}")
-        if not self.esta_vivo():
+        from estado_ente import Muerto
+        if self.vidas <= 0 and self.esta_vivo():
+            self.estado = Muerto()
             print(f"[{self.__class__.__name__}]  Ha sido derrotado.")
             self.notificar("derrotado")
         return 0
