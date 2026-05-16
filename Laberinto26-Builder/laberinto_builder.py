@@ -30,13 +30,18 @@ class LaberintoBuilder(Builder):
         }
         return estrategias.get(orientacion_str.lower())
 
-    def fabricarHabitacion(self, num):
+    def fabricarHabitacion(self, num, tipo="habitacion"):
         from norte import Norte
         from sur import Sur
         from este import Este
         from oeste import Oeste
 
-        habitacion = Habitacion(num)
+        if tipo == "habitacion_trampa":
+            from habitacion_trampa import HabitacionTrampa
+            habitacion = HabitacionTrampa(num, dano=5)
+        else:
+            habitacion = Habitacion(num)
+            
         habitacion.poner_en(Norte(), self.fabricarPared())
         habitacion.poner_en(Sur(), self.fabricarPared())
         habitacion.poner_en(Este(), self.fabricarPared())
@@ -128,6 +133,20 @@ class LaberintoBuilder(Builder):
         if hab:
             aliado = Aliado(nombre, escudo)
             hab.agregarHijo(aliado)
+
+    def fabricarPocion(self, padre, nombre, curacion):
+        from pocion import Pocion
+        pocion = Pocion(nombre, curacion)
+        if padre:
+            padre.agregarHijo(pocion)
+        return pocion
+
+    def fabricarLlave(self, padre, num_puerta_1, num_puerta_2, nombre):
+        from llave import Llave
+        llave = Llave(num_puerta_1, num_puerta_2, nombre)
+        if padre:
+            padre.agregarHijo(llave)
+        return llave
 
     def obtenerLaberinto(self):
         return self.laberinto

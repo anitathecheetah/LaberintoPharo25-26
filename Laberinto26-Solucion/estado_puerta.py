@@ -53,3 +53,18 @@ class Cerrada(EstadoPuerta):
 
     def __str__(self):
         return "Cerrada"
+
+class Bloqueada(EstadoPuerta):
+    """Estado Bloqueada de la puerta. Requiere una llave para pasar a Cerrada."""
+
+    def abrir(self, puerta):
+        print(f"La puerta {puerta} está bloqueada por magia oscura. Necesitas encontrar una llave (Cuerno) para desbloquearla.")
+
+    def entrar(self, alguien, puerta):
+        print(f"La puerta {puerta} está fuertemente bloqueada.")
+
+    def esta_cerrada(self):
+        return True # Se considera cerrada a efectos de no poder pasar
+
+    def __str__(self):
+        return "Bloqueada"

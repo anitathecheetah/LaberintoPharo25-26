@@ -21,6 +21,8 @@ class Aliado(Hoja, ManejadorDano):
             print(f"--> {self.nombre} te protegerá en la batalla final.")
             alguien.equipar_defensa(self)
             self.encontrado = True
+            if hasattr(alguien, 'juego') and alguien.juego:
+                alguien.juego.notificar_observadores("aliado_equipado", self)
 
     def gestionar_dano(self, cantidad):
         if self.escudo > 0:
