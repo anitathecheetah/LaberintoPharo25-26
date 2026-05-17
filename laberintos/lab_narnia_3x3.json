@@ -39,15 +39,21 @@
             ]
         },
         {
-            "tipo": "habitacion_trampa",
+            "tipo": "habitacion",
             "num": 5,
-            "dano": 30,
             "hijos": [
                 {
-                    "tipo": "llave",
-                    "nombre": "Cuerno Mágico de Susan",
-                    "puerta_1": 8,
-                    "puerta_2": 9
+                    "tipo": "armario",
+                    "congelado": true,
+                    "dano": 5,
+                    "hijos": [
+                        {
+                            "tipo": "llave",
+                            "nombre": "Cuerno Mágico de Susan",
+                            "puerta_1": 8,
+                            "puerta_2": 9
+                        }
+                    ]
                 }
             ]
         },

@@ -39,9 +39,8 @@ class TestState(unittest.TestCase):
         # Primero pasa a jugando e interactúa
         self.juego.notificar(per, "entrar_habitacion", hab)
         
-        # Como entró a una habitación con armario, debería ganar
-        self.assertIsInstance(self.juego.fase, Final)
-        self.assertEqual(self.juego.fase.resultado, "¡Has Ganado!")
+        # Como la victoria ahora requiere vencer a la Bruja, solo debería estar Jugando
+        self.assertIsInstance(self.juego.fase, Jugando)
 
     def test_estado_ente_vivo_a_muerto(self):
         per = Personaje("Hero", 10)
