@@ -69,11 +69,12 @@ class Director:
         tipo = dic.get("tipo", "")
         contenedor = padre
 
-        if tipo == "habitacion" or tipo == "habitacion_trampa":
-            dano = dic.get("dano", 5)
-            contenedor = self._builder.fabricarHabitacion(dic.get("num", 0), tipo=tipo, dano=dano)
+        if tipo == "habitacion":
+            contenedor = self._builder.fabricarHabitacion(dic.get("num", 0))
         elif tipo == "armario":
-            contenedor = self._builder.fabricarArmario(padre)
+            congelado = dic.get("congelado", False)
+            dano = dic.get("dano", 5)
+            contenedor = self._builder.fabricarArmario(padre, congelado=congelado, dano=dano)
         elif tipo == "bicho":
             # Bicho creado como hijo de un contenedor (ej. dentro de un armario)
             modo_str = dic.get("modo", "Agresivo")

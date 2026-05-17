@@ -36,11 +36,7 @@ class LaberintoBuilder(Builder):
         from este import Este
         from oeste import Oeste
 
-        if tipo == "habitacion_trampa":
-            from habitacion_trampa import HabitacionTrampa
-            habitacion = HabitacionTrampa(num, dano=dano)
-        else:
-            habitacion = Habitacion(num)
+        habitacion = Habitacion(num)
             
         habitacion.poner_en(Norte(), self.fabricarPared())
         habitacion.poner_en(Sur(), self.fabricarPared())
@@ -120,9 +116,12 @@ class LaberintoBuilder(Builder):
             armadura = Armadura(nombre, defensa)
             hab.agregarHijo(armadura)
 
-    def fabricarArmario(self, padre):
+    def fabricarArmario(self, padre, congelado=False, dano=5):
         from armario import Armario
         armario = Armario()
+        if congelado:
+            from hielo import Hielo
+            armario = Hielo(armario, dano)
         if padre:
             padre.agregarHijo(armario)
         return armario
