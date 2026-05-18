@@ -103,6 +103,12 @@ class Director:
         elif tipo == "llave":
             self._builder.fabricarLlave(padre, dic.get("puerta_1", 1), dic.get("puerta_2", 2), dic.get("nombre", "Llave Mágica"))
 
+        elif tipo == "varita":
+            from varita import VaritaItem
+            varita_item = VaritaItem(dic.get("nombre", "Varita de la Bruja Blanca 🪄"))
+            if padre:
+                padre.agregarHijo(varita_item)
+
         hijos = dic.get("hijos", [])
         for hijo in hijos:
             self.fabricarLaberintoRecursivo(hijo, contenedor)
