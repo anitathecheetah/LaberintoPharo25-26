@@ -76,7 +76,12 @@
         {
             "tipo": "habitacion",
             "num": 7,
-            "hijos": []
+            "hijos": [
+                {
+                    "tipo": "varita",
+                    "nombre": "Varita de la Bruja Blanca 🪄"
+                }
+            ]
         },
         {
             "tipo": "habitacion",

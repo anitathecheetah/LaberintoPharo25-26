@@ -1,111 +1,62 @@
-# Laberinto - Patrones de Diseño
+# Laberinto - Narnia & Patrones de Diseño
 
-Proyecto de la asignatura de Diseño de Software. Consiste en implementar en Python el ejemplo clásico del Laberinto (originalmente en Pharo/Smalltalk), aplicando los patrones de diseño GoF que se han visto en clase.
+Este es el proyecto final de la asignatura de Diseño de Software. Consiste en la implementación en Python del clásico juego del Laberinto, aplicando patrones de diseño GoF y ambientándolo temáticamente en "Las Crónicas de Narnia: El Invierno Eterno".
 
-## Qué hace
+## Qué hace el proyecto
 
-El programa modela un laberinto con habitaciones, paredes, puertas y túneles. Dentro del laberinto hay bichos con distintos comportamientos y un personaje que puede interactuar con ellos. Lo importante no es el laberinto en sí, sino cómo se aplican los patrones de diseño para construirlo y extenderlo.
+El programa simula un laberinto en consola donde el jugador controla a Peter Pevensie para explorar habitaciones, esquivar trampas de hielo, equipar defensas (armaduras y el aliado Aslan) y derrotar a la Bruja Blanca en el armario de la habitación final. Las interacciones físicas, el combate y los flujos lógicos están gestionados enteramente mediante patrones de diseño.
 
-## Cómo ejecutarlo
+## Cómo instalarlo o ejecutarlo
 
-Solo hace falta Python 3.8 o superior. No tiene dependencias externas.
+### Requisitos
+- Python 3.8 o superior.
+- No requiere dependencias externas.
 
+### Ejecución del juego interactivo
+Para jugar la campaña interactiva en la consola utilizando comandos de teclado (`w`, `a`, `s`, `d`):
+```bash
+python jugar_narnia.py
+```
+
+### Ejecución de la demo base
+Para comprobar el funcionamiento secuencial de los patrones del laberinto original:
 ```bash
 python main.py
 ```
 
-Esto ejecuta una demo que va probando cada patrón uno por uno: crea laberintos, abre puertas, activa bombas, construye desde JSON, etc.
+### Ejecución y detalle de los tests unitarios
+Para ejecutar el conjunto de 19 pruebas unitarias automatizadas:
+```bash
+python -m unittest discover -s Laberinto26-Pruebas
+```
+
+La suite cuenta con **19 pruebas automatizadas** organizadas en archivos individuales que verifican de forma aislada e independiente cada componente del juego:
+
+- **`test_aliado_chain_responsibility.py` (1 test):** Verifica que el NPC Aslan (Chain of Responsibility) intercepta y mitiga los daños protegiendo al personaje, sacrificándose en caso de daño mortal.
+- **`test_profecia_observer.py` (1 test):** Verifica que la `ProfeciaNarnia` (Observer) recibe y procesa reactivamente notificaciones de eventos lanzados por el `Juego`.
+- **`test_hielo_decorator.py` (3 tests):** Comprueba que el decorador `Hielo` inflige daño por helada al personaje y que hereda transparentemente la agregación de hijos (`agregarHijo()`).
+- **`test_llave_composite.py` (1 test):** Verifica que al recoger la `Llave` (Composite Leaf), esta localiza la puerta asociada en el laberinto y la desbloquea de forma remota.
+- **`test_puerta_state.py` (1 test):** Comprueba que una puerta en estado Bloqueada (State) prohíbe el paso hasta ser desbloqueada y pasar al estado Cerrada.
+- **`test_pocion_composite.py` (1 test):** Verifica que la `Pocion` (Composite Leaf) incrementa la vida de Peter una única vez.
+- **`test_varita_adapter.py` (1 test):** Valida que el `BichoAdapter` (Adapter) transforma el modo de ataque de la Bruja Blanca a `Perezoso` en el último golpe del combate final.
+- **`test_chain_responsibility.py` (4 tests):** Verifica que la mitigación de daño de Peter funcione sin equipamiento, con armadura individual, y con múltiples armaduras en cadena.
+- **`test_state.py` (5 tests):** Comprueba el control de fases del juego (Inicial, Jugando, Victoria, Derrota) y el cambio de estado de entes de vivo a muerto.
+- **`test_narnia.py` (1 test):** Test de integración de la campaña completa de principio a fin, completando la victoria contra la Bruja Blanca.
+
+---
 
 ## Patrones implementados
 
-- **Abstract Factory** — `LaberintoFactory` y `LaberintoBombasFactory` crean familias de productos (normal vs. bomba) sin acoplar el cliente a clases concretas.
-- **Factory Method** — `Juego` y `JuegoBomba`. Las subclases deciden qué elementos crear.
-- **Builder** — `LaberintoBuilder` + `Director`. Construcción paso a paso de laberintos a partir de archivos JSON.
-- **Singleton** — `Norte`, `Sur`, `Este`, `Oeste`. Solo existe una instancia de cada orientación.
-- **Composite** — `Contenedor` y `Hoja`. El laberinto contiene habitaciones, que contienen paredes/puertas.
-- **Decorator** — `Hechizo` y `Bomba` decoran elementos del mapa añadiendo comportamiento extra.
-- **Proxy** — `Tunel` actúa como intermediario que teletransporta a otro laberinto.
-- **Adapter** — `BichoAdapter` adapta un `Bicho` para que el `Personaje` lo use como si fuera una `Varita`.
-- **Strategy** — `Agresivo` y `Perezoso` son estrategias intercambiables que definen cómo actúa un `Bicho`.
-- **Iterator** — El método `recorrer()` permite recorrer todos los elementos del laberinto internamente.
+En este proyecto se han implementado y adaptado los siguientes patrones de diseño:
 
-## Estructura
-
-```
-├── main.py                      # Punto de entrada, ejecuta la demo
-├── juego.py / juego_bomba.py    # Factory Method
-├── laberinto.py                 # Laberinto (Composite)
-├── habitacion.py                # Habitación con 4 lados
-├── pared.py / puerta.py         # Elementos básicos del mapa
-├── pared_bomba.py / puerta_bomba.py
-├── contenedor.py / hoja.py      # Composite base
-├── elemento_mapa.py             # Clase abstracta raíz
-├── orientacion.py               # Clase base orientación
-├── norte.py / sur.py / este.py / oeste.py  # Singleton
-├── decorator.py / hechizo.py / bomba.py    # Decorator
-├── tunel.py                     # Proxy
-├── bicho_adapter.py / varita.py # Adapter
-├── personaje.py
-├── bicho.py / ente.py           # Entidades
-├── modo.py / agresivo.py / perezoso.py  # Strategy
-├── builder.py / laberinto_builder.py    # Builder
-├── director.py                  # Director
-├── laberinto_factory.py         # Abstract Factory
-├── laberinto_bombas_factory.py
-└── laberintos/                  # JSONs de configuración
-    ├── lab2hab2b.json
-    └── lab2hab1bic1tun1per.json
-```
-
-## Configuración JSON
-
-Se pueden definir laberintos con archivos JSON. El Director los lee y usa el Builder para montarlos. Ejemplo:
-
-```json
-{
-  "forma": "poligono4",
-  "laberinto": [
-    { "tipo": "habitacion", "num": 1, "hijos": [] },
-    { "tipo": "habitacion", "num": 2, "hijos": [] }
-  ],
-  "puertas": [
-    [1, "Este", 2, "Oeste"]
-  ],
-  "bichos": [
-    { "modo": "Agresivo", "posicion": 1 },
-    { "modo": "Perezoso", "posicion": 2 }
-  ]
-}
-```
-
-## Ejemplo de salida
-
-```
-Laberinto creado con 2 habitaciones
-
-Probando el norte:
-¡Ouch! Te has chocado contra una pared.
-
---- Probando Factory Method con JuegoBomba y Decorator ---
- ¡BOOM! La bomba explota.
-
---- Probando Builder y Director ---
-Builder y Director han ensamblado con éxito un laberinto con 2 habitaciones desde JSON.
-
---- Probando Singleton en Orientaciones ---
-¿Son n1 y n2 la misma y única instancia en memoria? Sí
-
---- Probando Strategy con bichos ---
-El bicho Bicho busca pelea agresivamente.
-
---- Probando Proxy (Tunel) ---
---- ! Has entrado en el Túnel Teletransportador (Proxy) ! ---
-
---- Probando Adapter (Varita Mágica) ---
-Un rayo mágico daña al bicho agresivo...
-Estado tras el primer ataque: Perezoso
-```
-
-## Autora
-
-Ana Rodríguez de Vera Martínez
+- **Composite:** Habitaciones, armarios, pociones y llaves estructuradas como nodos del mapa.
+- **Decorator:** Trampas de helada (`Hielo`) que decoran dinámicamente armarios o habitaciones.
+- **State:** Máquina de estados de las puertas (`EstadoPuerta`) con estados Abierta, Cerrada y Bloqueada.
+- **Chain of Responsibility:** Sistema de defensas del personaje (`Aliado` y `Armadura`) para interceptar y mitigar el daño en cadena.
+- **Observer:** Notificación reactiva de eventos de juego procesada por la clase `ProfeciaNarnia`.
+- **Adapter:** `BichoAdapter` que adapta al enemigo Bruja Blanca a la interfaz `Varita` en el combate final.
+- **Strategy:** Modos de ataque de los bichos (Agresivo y Perezoso).
+- **Singleton:** Representación de orientaciones cardinales (Norte, Sur, Este, Oeste).
+- **Builder & Director:** Carga e instanciación dinámica del laberinto a partir del archivo JSON de configuración.
+- **Abstract Factory:** `LaberintoFactory` y `LaberintoBombasFactory` para familias de elementos del mapa.
+- **Factory Method:** Subclases de `Juego` encargadas de decidir la instanciación de los laberintos.

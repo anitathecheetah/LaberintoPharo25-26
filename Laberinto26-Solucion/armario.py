@@ -27,6 +27,17 @@ class Armario(Contenedor):
                 from personaje import Personaje
                 if isinstance(alguien, Personaje):
                     while alguien.esta_vivo() and hijo.esta_vivo():
+                        # --- NUEVA LÓGICA DE LA VARITA EN EL ÚLTIMO GOLPE ---
+                        if hasattr(hijo, 'nombre') and "Bruja Blanca" in hijo.nombre and hijo.vidas <= 20 and hijo.esta_vivo():
+                            # El bicho está a punto de morir (último golpe). Peter usa la varita!
+                            from bicho_adapter import BichoAdapter
+                            from perezoso import Perezoso
+                            if not isinstance(hijo.modo, Perezoso):
+                                varita = BichoAdapter(hijo)
+                                print(f"\n⚡ ¡{alguien.nombre} usa la VARITA MÁGICA DE LA BRUJA BLANCA en el momento crítico! ⚡")
+                                alguien.usar_varita(varita)
+                                print("🧙‍♀️ La Bruja Blanca se debilita por su propia magia y queda apaciguada (Perezosa).")
+                        
                         alguien.atacar(hijo)
                         if hijo.esta_vivo():
                             hijo.atacar(alguien)

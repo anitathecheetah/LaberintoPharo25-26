@@ -36,8 +36,15 @@ class Juego:
         """Método de mediación central (Patrón Mediator)"""
         if evento == "atacar":
             objetivo = datos
-            print(f"JUEGO (Mediador): {remitente.nombre if hasattr(remitente, 'nombre') else remitente.__class__.__name__} ataca a {objetivo.nombre if hasattr(objetivo, 'nombre') else objetivo.__class__.__name__} con {remitente.poder} puntos de poder.")
-            objetivo.recibir_dano(remitente.poder)
+            poder_real = remitente.poder
+            from bicho import Bicho
+            if isinstance(remitente, Bicho) and hasattr(remitente, 'modo') and remitente.modo:
+                from perezoso import Perezoso
+                if isinstance(remitente.modo, Perezoso):
+                    poder_real = remitente.poder // 2
+                    print(f"JUEGO (Mediador): {remitente.nombre if hasattr(remitente, 'nombre') else remitente.__class__.__name__} está apaciguado (Perezoso). Su ataque se reduce a {poder_real}.")
+            print(f"JUEGO (Mediador): {remitente.nombre if hasattr(remitente, 'nombre') else remitente.__class__.__name__} ataca a {objetivo.nombre if hasattr(objetivo, 'nombre') else objetivo.__class__.__name__} con {poder_real} puntos de poder.")
+            objetivo.recibir_dano(poder_real)
         elif evento == "derrotado":
             print(f"JUEGO (Mediador): Certificado de defunción emitido para {remitente.nombre if hasattr(remitente, 'nombre') else remitente.__class__.__name__}.")
             self.notificar_observadores("enemigo_derrotado", remitente)

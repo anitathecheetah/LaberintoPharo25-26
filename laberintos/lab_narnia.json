@@ -9,6 +9,10 @@
                     "tipo": "pocion",
                     "nombre": "Cordial de Flor de Fuego de Lucía",
                     "curacion": 100
+                },
+                {
+                    "tipo": "varita",
+                    "nombre": "Varita de la Bruja Blanca 🪄"
                 }
             ]
         },

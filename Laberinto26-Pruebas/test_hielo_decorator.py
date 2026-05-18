@@ -1,6 +1,6 @@
-import unittest
 import sys
 import os
+import unittest
 
 _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 for _pkg in ['Laberinto26-Solucion', 'Laberinto26-Builder']:
@@ -13,7 +13,7 @@ from hielo import Hielo
 from personaje import Personaje
 from llave import Llave
 
-class TestDecoratorHielo(unittest.TestCase):
+class TestHieloDecoratorExtension(unittest.TestCase):
 
     def setUp(self):
         # Configuramos un armario base y lo decoramos con Hielo
@@ -40,6 +40,18 @@ class TestDecoratorHielo(unittest.TestCase):
         
         # Verificamos que la llave se guardó realmente dentro del armario base
         self.assertIn(llave, self.armario_base.hijos)
+
+    def test_congelamiento_causa_dano_15(self):
+        """Verifica que el Decorador de Hielo inflige daño por helada superior al abrir el armario congelado si se configura así."""
+        armario = Armario()
+        hielo = Hielo(armario, dano=15)
+        personaje = Personaje("Lucy", vidas=100)
+        
+        # Lucy abre el armario helado
+        hielo.entrar(personaje)
+        
+        # Recibe 15 de daño por el invierno eterno
+        self.assertEqual(personaje.vidas, 85)
 
 if __name__ == '__main__':
     unittest.main()
